@@ -17,6 +17,10 @@
     private IMediator Mediator { get; }
     public async Task<GetCatPicResponse> Handle(
       GetCatPicRequest aGetCatPicRequest,
-      CancellationToken aCancellationToken) => await Mediator.Send(aGetCatPicRequest, aCancellationToken);
+      CancellationToken aCancellationToken)
+    {
+      GetCatPicResponse getCatPicResponse = await Mediator.Send(aGetCatPicRequest, aCancellationToken);
+      return getCatPicResponse;
+    }
   }
 }

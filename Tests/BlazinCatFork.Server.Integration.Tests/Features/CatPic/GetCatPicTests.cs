@@ -2,7 +2,7 @@
 {
   using System;
   using System.Threading.Tasks;
-  using BlazinCatFork.Shared.Features.CatPic;
+  using BlazinCatFork.Server.Services.CatPic;
   using MediatR;
   using Microsoft.Extensions.DependencyInjection;
   using Shouldly;
