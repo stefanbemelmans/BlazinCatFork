@@ -68,6 +68,16 @@
 
       aServiceCollection.AddMediatR(typeof(Startup).GetTypeInfo().Assembly);
       aServiceCollection.AddHttpClient();
+
+      // experimenting with setting custom header
+
+      //aServiceCollection.AddHttpClient("CatPic", c =>
+      //{
+      //  c.BaseAddress = new System.Uri("https://api.thecatapi.com/v1/images/search?size=med");
+      //  c.DefaultRequestHeaders.Add("x-api", "23e061a5-c2d3-480e-8105-2fd0fb96a6aa");
+      //}
+      //  );
+
       aServiceCollection.Scan
       (
         aTypeSourceSelector => aTypeSourceSelector

@@ -14,11 +14,14 @@ namespace BlazinCatFork.Server.Services.CatPic
 
     public GetCatPicHandler(CatPicHttpClient aCatPicHttpClient)
     {
-      CatPicClient = aCatPicHttpClient;
+      CatClient = aCatPicHttpClient;
     }
-    public CatPicHttpClient CatPicClient { get; }
+    public CatPicHttpClient CatClient { get; }
 
-    public async Task<GetCatPicResponse> Handle(GetCatPicRequest aGetCatPicRequest, CancellationToken aCancellationToken) => await CatPicClient.CatClient.GetJsonAsync<GetCatPicResponse>(CatPicClient.MedCatUrl);
-
+    public async Task<GetCatPicResponse> Handle(GetCatPicRequest aGetCatPicRequest, CancellationToken aCancellationToken)
+    {
+      GetCatPicResponse response = await CatClient.CatClient.GetJsonAsync<GetCatPicResponse>("");
+      return response;
+    }
   }
 }

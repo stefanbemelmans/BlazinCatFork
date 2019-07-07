@@ -8,13 +8,24 @@ namespace BlazinCatFork.Server.Services.CatPic
 {
   public class CatPicHttpClient
   {
-    private static IHttpClientFactory CatClientFactory;
+    public CatPicHttpClient(IHttpClientFactory aHttpClient)
+    {
+      CatClient = aHttpClient.CreateClient();
+      CatClient.BaseAddress = new Uri(MedCatUrl);
+      CatClient.DefaultRequestHeaders.Add("x-api", CatApiKey);
+    }
+    public HttpClient CatClient { get; set; }
 
-    public HttpClient CatClient = CatClientFactory.CreateClient();
-    public string  MedCatUrl = "https://api.thecatapi.com/v1/images/search?size=med";
+    public static string  MedCatUrl = "https://api.thecatapi.com/v1/images/search?size=med";
     private const string CatApiKey = "23e061a5-c2d3-480e-8105-2fd0fb96a6aa";
 
-    public HttpRequestMessage CatPicRequestMessage = new HttpRequestMessage(HttpMethod.Get, MedCatUrl);
+    //private static IHttpClientFactory CatClientFactory;
 
+    //public static HttpClient CatClient = CatClientFactory.CreateClient();
+    //public static HttpRequestMessage CatPicRequestMessage = new HttpRequestMessage(HttpMethod.Get, MedCatUrl);
+
+      
+
+    
   }
 }

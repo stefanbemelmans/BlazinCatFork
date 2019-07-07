@@ -6,13 +6,12 @@
 
   internal partial class CatPicState : State<CatPicState>
   {
-    private CatPicDto _CatPic;
-
-    public CatPicDto CatPic => _CatPic.AsReadOnly();
+    private GetCatPicResponse _CatPic;
+    public GetCatPicResponse CatPic { get; set; }
 
     public CatPicState()
     {
-      _CatPic = new CatPicDto();
+      _CatPic = CatPic;
     }
     protected override void Initialize() { }
   }
