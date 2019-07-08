@@ -6,18 +6,26 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
 using System.Threading;
 using System.Net.Http;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace BlazinCatFork.Server.Services.CatPic
 {
   public class GetCatPicHandler : IRequestHandler<GetCatPicRequest, GetCatPicResponse>
   {
-   
-    //public CatPicHttpClient CatClient = new CatPicHttpClient(IHttpClientFactory aHttpClientFactory);
+
+    public GetCatPicHandler(CatPicHttpClient aCatPicHttpClient)
+    {
+      CatPicHttpClient = aCatPicHttpClient; 
+    }
+    public CatPicHttpClient CatPicHttpClient = new CatPicHttpClient();
 
     public async Task<GetCatPicResponse> Handle(GetCatPicRequest aGetCatPicRequest, CancellationToken aCancellationToken)
     {
-      GetCatPicResponse response = await CatPicHttpClient.CatClient.GetJsonAsync<GetCatPicResponse>(CatPicHttpClient.MedCatUrl);
-      return response;
+      GetCatPicResponse catpicurl = await CatPicHttpClient.GetJsonAsync<GetCatPicResponse>(CatPicHttpClient.MedCatUrl);
+      //Console.WriteLine(catpicurl);
+      GetCatPicResponse acatpicurl = JsonConvert.DeserializeObject<GetCatPicResponse>(catpicurl.ToString());
+      return catpicurl;
     }
   }
 }

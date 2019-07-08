@@ -25,11 +25,12 @@
       var getCatPicRequest = new GetCatPicRequest();
 
       //Act
-      GetCatPicResponse getCatPicResponse =
+      GetCatPicResponse response =
         await Mediator.Send(getCatPicRequest);
 
+      Console.WriteLine(response);
       //Assert
-      getCatPicResponse.url.ShouldNotBeNull();
+      response.url.ShouldNotBeNull();
 
     }
   }

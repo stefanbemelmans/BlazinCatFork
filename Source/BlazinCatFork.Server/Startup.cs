@@ -9,6 +9,7 @@
   using Microsoft.Extensions.Hosting;
   using System.Linq;
   using System.Reflection;
+  using BlazinCatFork.Server.Services.CatPic;
 
   public class Startup
   {
@@ -68,6 +69,7 @@
 
       aServiceCollection.AddMediatR(typeof(Startup).GetTypeInfo().Assembly);
       aServiceCollection.AddHttpClient();
+      aServiceCollection.AddScoped<CatPicHttpClient>();
 
       // experimenting with setting custom header
 
