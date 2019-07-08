@@ -25,7 +25,7 @@ namespace BlazinCatFork.Server.Services.CatPic
       GetCatPicResponse catpicurl = await CatPicHttpClient.GetJsonAsync<GetCatPicResponse>(CatPicHttpClient.MedCatUrl);
       //Console.WriteLine(catpicurl);
       GetCatPicResponse acatpicurl = JsonConvert.DeserializeObject<GetCatPicResponse>(catpicurl.ToString());
-      return catpicurl;
+      return acatpicurl;
     }
   }
 }

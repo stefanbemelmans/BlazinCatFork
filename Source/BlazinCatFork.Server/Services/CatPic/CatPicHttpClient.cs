@@ -11,7 +11,7 @@ namespace BlazinCatFork.Server.Services.CatPic
     public CatPicHttpClient()
     {
       //CatPicEndpoint = new System.Uri(MedCatUrl);
-      DefaultRequestHeaders.Add("x-api", CatApiKey);
+      DefaultRequestHeaders.Add("x-api-key", CatApiKey);
     }
     //public static HttpClient CatClient = new HttpClient();
 
