@@ -13,7 +13,7 @@ namespace BlazinCatFork.Server.Services.CatPic
 {
   public class GetCatPicHandler : IRequestHandler<GetCatPicRequest, GetCatPicResponse>
   {
-
+    
     public GetCatPicHandler(CatPicHttpClient aCatPicHttpClient)
     {
       CatPicHttpClient = aCatPicHttpClient; 
@@ -22,9 +22,12 @@ namespace BlazinCatFork.Server.Services.CatPic
 
     public async Task<GetCatPicResponse> Handle(GetCatPicRequest aGetCatPicRequest, CancellationToken aCancellationToken)
     {
-      GetCatPicResponse catpicurl = await CatPicHttpClient.GetJsonAsync<GetCatPicResponse>(CatPicHttpClient.MedCatUrl);
-      //Console.WriteLine(catpicurl);
-      GetCatPicResponse acatpicurl = JsonConvert.DeserializeObject<GetCatPicResponse>(catpicurl.ToString());
+      string catpicurl = await CatPicHttpClient.GetStringAsync(CatPicHttpClient.MedCatUrl);
+
+      List<object> catrep = JsonConvert.DeserializeObject<List<object>>(catpicurl);
+      string WegotThis = catrep[0].ToString();
+      GetCatPicResponse acatpicurl = JsonConvert.DeserializeObject<GetCatPicResponse>(WegotThis);
+
       return acatpicurl;
     }
   }
