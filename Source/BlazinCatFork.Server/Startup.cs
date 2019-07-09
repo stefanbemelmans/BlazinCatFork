@@ -69,7 +69,7 @@
 
       aServiceCollection.AddMediatR(typeof(Startup).GetTypeInfo().Assembly);
       aServiceCollection.AddHttpClient();
-      aServiceCollection.AddScoped<CatPicHttpClient>();
+      aServiceCollection.AddScoped<TheCatApiHttpClient>();
 
       // experimenting with setting custom header
 

@@ -1,16 +1,17 @@
-﻿namespace BlazinCatFork.Server.Integration.Tests.Features.CatPic.GetCatPicUrl
+﻿namespace BlazinCatFork.Server.Integration.Tests.Features.CatPic.SearchUrl
 {
   using System;
+  using System.Linq;
   using System.Threading.Tasks;
   using BlazinCatFork.Server.Services.CatPic;
   using MediatR;
   using Microsoft.Extensions.DependencyInjection;
   using Shouldly;
 
-  class GetCatPicTests
+  class SearchTests
   {
 
-    public GetCatPicTests(TestFixture aTestFixture)
+    public SearchTests(TestFixture aTestFixture)
     {
       ServiceProvider = aTestFixture.ServiceProvider;
       Mediator = ServiceProvider.GetService<IMediator>();
@@ -22,15 +23,15 @@
     public async Task ShouldGetACatPicUrl()
     {
       // Arrange
-      var getCatPicRequest = new GetCatPicRequest();
+      var SearchRequest = new SearchRequest();
 
       //Act
-      GetCatPicResponse response =
-        await Mediator.Send(getCatPicRequest);
+      SearchResponse response =
+        await Mediator.Send(SearchRequest);
 
       Console.WriteLine(response);
       //Assert
-      response.url.ShouldNotBeNull();
+      response.Images.First().Url.ShouldNotBeNull();
 
     }
   }
