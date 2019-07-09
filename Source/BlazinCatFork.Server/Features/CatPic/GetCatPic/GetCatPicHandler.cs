@@ -8,19 +8,19 @@
   using BlazinCatFork.Shared.Features.CatPic;
   using MediatR;
 
-  public class GetCatPicHandler : IRequestHandler<GetCatPicRequest, GetCatPicResponse>
+  public class GetCatPicHandler : IRequestHandler<SearchRequest, SearchResponse>
   {
     public GetCatPicHandler(IMediator aMediator)
     {
       Mediator = aMediator;
     }
     private IMediator Mediator { get; }
-    public async Task<GetCatPicResponse> Handle(
-      GetCatPicRequest aGetCatPicRequest,
+    public async Task<SearchResponse> Handle(
+      SearchRequest aSearchRequest,
       CancellationToken aCancellationToken)
     {
-      GetCatPicResponse getCatPicResponse = await Mediator.Send(aGetCatPicRequest, aCancellationToken);
-      return getCatPicResponse;
+      SearchResponse SearchResponse = await Mediator.Send(aSearchRequest, aCancellationToken);
+      return SearchResponse;
     }
   }
 }
