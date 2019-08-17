@@ -1,0 +1,1 @@
+dotnet run --project .\Source\BlazinCatfork_P7.Server\
