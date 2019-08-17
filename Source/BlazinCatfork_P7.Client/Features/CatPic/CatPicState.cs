@@ -3,15 +3,16 @@
   using System.Collections.Generic;
   using BlazinCatFork.Shared.Features.CatPic;
   using BlazorState;
+  using static BlazinCatFork.Shared.Features.CatPic.SearchResponse;
 
   internal partial class CatPicState : State<CatPicState>
   {
-    private GetCatPicResponse _CatPic;
-    public GetCatPicResponse CatPic { get; set; }
+    //private SearchResponse _CatPic;
 
+    public string CatPicUrl { get;set; }
     public CatPicState()
     {
-      _CatPic = CatPic;
+      //CatPicUrl = _CatPic.Images[0].Url;
     }
     protected override void Initialize() { }
   }
