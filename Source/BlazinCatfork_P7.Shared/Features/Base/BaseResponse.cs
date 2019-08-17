@@ -1,4 +1,4 @@
-﻿namespace BlazinCatfork_P7.Shared.Features.Base
+﻿namespace BlazinCatFork_P7.Shared.Features.Base
 {
   using System;
 

@@ -1,8 +1,8 @@
-﻿namespace BlazinCatfork_P7.Shared.Features.WeatherForecast
+﻿namespace BlazinCatFork_P7.Shared.Features.WeatherForecast
 {
   using System;
   using System.Collections.Generic;
-  using BlazinCatfork_P7.Shared.Features.Base;
+  using BlazinCatFork_P7.Shared.Features.Base;
 
   public class GetWeatherForecastsResponse : BaseResponse
   {

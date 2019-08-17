@@ -1,4 +1,4 @@
-﻿namespace BlazinCatFork.Client.Features.CatPic
+﻿namespace BlazinCatFork_P7.Client.Features.CatPic
 {
   using BlazorState;
 
@@ -13,6 +13,6 @@
       //CatPicUrl = _CatPic.Images[0].Url;
     }
 
-    protected override void Initialize() => CatPicUrl = null;
+    protected override void Initialize() => CatUrl = null;
   }
 }

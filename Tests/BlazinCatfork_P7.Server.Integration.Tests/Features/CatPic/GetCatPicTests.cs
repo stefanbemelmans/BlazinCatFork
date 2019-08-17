@@ -1,10 +1,10 @@
-﻿namespace BlazinCatFork.Server.Integration.Tests.Features.CatPic.SearchUrl
+﻿namespace BlazinCatFork_P7.Server.Integration.Tests.Features.CatPic.SearchUrl
 {
   using System;
   using System.Linq;
   using System.Threading.Tasks;
-  using BlazinCatFork.Server.Services.CatPic;
-  using BlazinCatfork_P7.Server.Integration.Tests;
+  using BlazinCatFork_P7.Server.Integration.Tests;
+  using BlazinCatFork_P7.Server.Services.CatPic;
   using MediatR;
   using Microsoft.Extensions.DependencyInjection;
   using Shouldly;

@@ -1,6 +1,6 @@
-﻿namespace BlazinCatfork_P7.EndToEnd.Tests
+﻿namespace BlazinCatFork_P7.EndToEnd.Tests
 {
-  using BlazinCatfork_P7.EndToEnd.Tests.Infrastructure;
+  using BlazinCatFork_P7.EndToEnd.Tests.Infrastructure;
   using OpenQA.Selenium;
   using Shouldly;
   using static Infrastructure.WaitAndAssert;
@@ -25,7 +25,7 @@
       WaitUntilClientCached();
 
       object clientApplication = JavaScriptExecutor.ExecuteScript("return window.localStorage.getItem('clientApplication');");
-      clientApplication.ShouldBe("BlazinCatfork_P7.Client.0.0.1");
+      clientApplication.ShouldBe("BlazinCatFork_P7.Client.0.0.1");
     }
 
     public void InitalizationWorkedClientSide()

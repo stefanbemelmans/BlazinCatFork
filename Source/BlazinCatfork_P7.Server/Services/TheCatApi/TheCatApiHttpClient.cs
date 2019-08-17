@@ -1,4 +1,4 @@
-﻿namespace BlazinCatFork.Server.Services.CatPic
+﻿namespace BlazinCatFork_P7.Server.Services.CatPic
 {
   using System.Net.Http;
 

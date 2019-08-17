@@ -1,9 +1,10 @@
-﻿namespace BlazinCatfork_P7.Client
+﻿namespace BlazinCatFork_P7.Client
 {
-  using BlazinCatfork_P7.Client.Features.Application;
-  using BlazinCatfork_P7.Client.Features.Counter;
-  using BlazinCatfork_P7.Client.Features.EventStream;
-  using BlazinCatfork_P7.Client.Features.WeatherForecast;
+  using BlazinCatFork_P7.Client.Features.Application;
+  using BlazinCatFork_P7.Client.Features.CatPic;
+  using BlazinCatFork_P7.Client.Features.Counter;
+  using BlazinCatFork_P7.Client.Features.EventStream;
+  using BlazinCatFork_P7.Client.Features.WeatherForecast;
   using BlazorHostedCSharp.Client.Features.ClientLoader;
   using BlazorState;
   using MediatR;
@@ -44,6 +45,7 @@
       aServiceCollection.AddTransient<CounterState>();
       aServiceCollection.AddTransient<EventStreamState>();
       aServiceCollection.AddTransient<WeatherForecastsState>();
+      aServiceCollection.AddTransient<CatPicState>();
     }
   }
 }

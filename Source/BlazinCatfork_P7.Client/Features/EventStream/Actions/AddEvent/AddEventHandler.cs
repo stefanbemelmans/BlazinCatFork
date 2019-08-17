@@ -1,10 +1,10 @@
-﻿namespace BlazinCatfork_P7.Client.Features.EventStream
+﻿namespace BlazinCatFork_P7.Client.Features.EventStream
 {
   using System;
   using System.Threading;
   using System.Threading.Tasks;
   using BlazorState;
-  using BlazinCatfork_P7.Client.Features.Base;
+  using BlazinCatFork_P7.Client.Features.Base;
 
 
   internal partial class EventStreamState

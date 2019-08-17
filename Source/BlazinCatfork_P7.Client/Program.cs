@@ -1,4 +1,4 @@
-﻿namespace BlazinCatfork_P7.Client
+﻿namespace BlazinCatFork_P7.Client
 {
   using Microsoft.AspNetCore.Blazor.Hosting;
 

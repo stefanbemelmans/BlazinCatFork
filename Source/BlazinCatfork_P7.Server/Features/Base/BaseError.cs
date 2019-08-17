@@ -1,4 +1,4 @@
-﻿namespace BlazinCatfork_P7.Server.Features.Base
+﻿namespace BlazinCatFork_P7.Server.Features.Base
 {
   public class BaseError
   {

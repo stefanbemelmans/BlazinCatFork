@@ -1,26 +1,30 @@
-﻿namespace BlazinCatFork.Server.Features.CatPic
+﻿namespace BlazinCatFork_P7.Server.Features.CatPic
 {
-  using System;
-  using System.Collections.Generic;
-  using System.Linq;
   using System.Threading;
   using System.Threading.Tasks;
-  using BlazinCatFork.Shared.Features.CatPic;
+  using BlazinCatFork_P7.Shared.Features.CatPic;
+  using BlazinCatFork_P7.Server.Services.CatPic;
   using MediatR;
 
-  public class GetCatPicHandler : IRequestHandler<SearchRequest, SearchResponse>
+  public class GetCatPicHandler : IRequestHandler<Shared.Features.CatPic.SearchRequest, Shared.Features.CatPic.SearchResponse>
   {
     public GetCatPicHandler(IMediator aMediator)
     {
       Mediator = aMediator;
     }
     private IMediator Mediator { get; }
-    public async Task<SearchResponse> Handle(
-      SearchRequest aSearchRequest,
+    public async Task<Shared.Features.CatPic.SearchResponse> Handle(
+     Shared.Features.CatPic.SearchRequest aSearchRequest,
       CancellationToken aCancellationToken)
     {
-      SearchResponse SearchResponse = await Mediator.Send(aSearchRequest, aCancellationToken);
-      return SearchResponse;
+      Services.CatPic.SearchResponse searchResponse = await Mediator.Send(new Services.CatPic.SearchRequest(), aCancellationToken);
+
+      var SharedResponse = new Shared.Features.CatPic.SearchResponse()
+      {
+        Images = searchResponse.Images
+      };
+
+      return SharedResponse;
     }
   }
 }

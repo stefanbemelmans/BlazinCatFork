@@ -1,8 +1,8 @@
-﻿namespace BlazinCatfork_P7.Client.Integration.Tests.Features.EventStream
+﻿namespace BlazinCatFork_P7.Client.Integration.Tests.Features.EventStream
 {
   using AnyClone;
-  using BlazinCatfork_P7.Client.Features.EventStream;
-  using BlazinCatfork_P7.Client.Integration.Tests.Infrastructure;
+  using BlazinCatFork_P7.Client.Features.EventStream;
+  using BlazinCatFork_P7.Client.Integration.Tests.Infrastructure;
   using BlazorState;
   using Microsoft.Extensions.DependencyInjection;
   using Shouldly;

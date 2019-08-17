@@ -1,7 +1,7 @@
-﻿namespace BlazinCatfork_P7.EndToEnd.Tests
+﻿namespace BlazinCatFork_P7.EndToEnd.Tests
 {
   using System;
-  using BlazinCatfork_P7.EndToEnd.Tests.Infrastructure;
+  using BlazinCatFork_P7.EndToEnd.Tests.Infrastructure;
   using Fixie;
   using Microsoft.Extensions.DependencyInjection;
 

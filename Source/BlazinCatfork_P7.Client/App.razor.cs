@@ -1,4 +1,4 @@
-﻿namespace BlazinCatfork_P7.Client
+﻿namespace BlazinCatFork_P7.Client
 {
   using System.Threading.Tasks;
   using BlazorState.Pipeline.ReduxDevTools;

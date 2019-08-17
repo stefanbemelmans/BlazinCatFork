@@ -1,17 +1,13 @@
-﻿using BlazinCatFork.Client.Features.CatPic;
-using BlazinCatFork.Shared.Features.CatPic;
-using BlazinCatfork_P7.Client.Features.Base;
-using BlazorState;
-using Microsoft.AspNetCore.Components;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Threading;
-using System.Threading.Tasks;
-
-namespace BlazinCatfork_P7.Client.Features.CatPic
+﻿namespace BlazinCatFork_P7.Client.Features.CatPic
 {
+  using BlazinCatFork_P7.Client.Features.Base;
+  using BlazinCatFork_P7.Shared.Features.CatPic;
+  using BlazorState;
+  using Microsoft.AspNetCore.Components;
+  using System.Net.Http;
+  using System.Threading;
+  using System.Threading.Tasks;
+
   internal partial class CatPicState 
   {
     public class GetCatPicHandler : BaseHandler<GetCatPicAction, CatPicState>
@@ -21,7 +17,6 @@ namespace BlazinCatfork_P7.Client.Features.CatPic
         HttpClient = aHttpClient;
       }
       private HttpClient HttpClient { get; }
-      private CatPicState CatPicState => Store.GetState<CatPicState>();
       public override async Task<CatPicState> Handle
       (
         GetCatPicAction aGetCatPicAction,
@@ -29,10 +24,11 @@ namespace BlazinCatfork_P7.Client.Features.CatPic
       )
       {
         SearchResponse CatPicList = await HttpClient.GetJsonAsync<SearchResponse>(SearchRequest.Route);
+        string url = CatPicList.Images[0].Url;
 
-        CatPicState. = CatPicList.Images[0].Url;
-
+        CatPicState.CatPicUrl = url;
         return CatPicState;
+        
       }
     }
   }

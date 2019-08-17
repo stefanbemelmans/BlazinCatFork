@@ -1,4 +1,4 @@
-﻿namespace BlazinCatfork_P7.Client.Features.Application
+﻿namespace BlazinCatFork_P7.Client.Features.Application
 {
   using BlazorState;
 
@@ -16,7 +16,7 @@
     protected override void Initialize()
     {
       IsMenuExpanded = true;
-      Name = "BlazinCatfork_P7";
+      Name = "BlazinCatFork_P7";
       Logo = "/images/logo.png";
     }
 

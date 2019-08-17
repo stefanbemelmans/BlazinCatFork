@@ -1,6 +1,6 @@
-﻿namespace BlazinCatfork_P7.Client.Features.Counter
+﻿namespace BlazinCatFork_P7.Client.Features.Counter
 {
-  using BlazinCatfork_P7.Client.Pipeline.NotificationPostProcessor;
+  using BlazinCatFork_P7.Client.Pipeline.NotificationPostProcessor;
   using MediatR;
   using Microsoft.Extensions.Logging;
   using System.Threading;

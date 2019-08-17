@@ -1,4 +1,4 @@
-﻿namespace BlazinCatfork_P7.Client.Features.EventStream
+﻿namespace BlazinCatFork_P7.Client.Features.EventStream
 {
   using MediatR;
 

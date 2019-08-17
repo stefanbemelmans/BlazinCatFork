@@ -1,4 +1,4 @@
-﻿namespace BlazinCatfork_P7.Client.Pages.Authentication
+﻿namespace BlazinCatFork_P7.Client.Pages.Authentication
 {
   using Microsoft.AspNetCore.Components;
 

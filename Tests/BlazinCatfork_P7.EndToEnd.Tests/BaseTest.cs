@@ -1,6 +1,6 @@
-﻿namespace BlazinCatfork_P7.EndToEnd.Tests
+﻿namespace BlazinCatFork_P7.EndToEnd.Tests
 {
-  using BlazinCatfork_P7.EndToEnd.Tests.Infrastructure;
+  using BlazinCatFork_P7.EndToEnd.Tests.Infrastructure;
   using OpenQA.Selenium;
   using OpenQA.Selenium.Support.UI;
   using System;

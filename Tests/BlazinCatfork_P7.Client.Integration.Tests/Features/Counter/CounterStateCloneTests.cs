@@ -1,8 +1,8 @@
-﻿namespace BlazinCatfork_P7.Client.Integration.Tests.Features.Counter
+﻿namespace BlazinCatFork_P7.Client.Integration.Tests.Features.Counter
 {
   using AnyClone;
-  using BlazinCatfork_P7.Client.Features.Counter;
-  using BlazinCatfork_P7.Client.Integration.Tests.Infrastructure;
+  using BlazinCatFork_P7.Client.Features.Counter;
+  using BlazinCatFork_P7.Client.Integration.Tests.Infrastructure;
   using BlazorState;
   using Microsoft.Extensions.DependencyInjection;
   using Shouldly;

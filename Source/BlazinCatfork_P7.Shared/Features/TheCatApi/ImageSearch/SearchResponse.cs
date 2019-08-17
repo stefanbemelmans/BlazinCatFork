@@ -1,19 +1,18 @@
-﻿namespace BlazinCatFork.Shared.Features.CatPic
+﻿namespace BlazinCatFork_P7.Shared.Features.CatPic
 {
-  using BlazinCatfork_P7.Shared.Features.Base;
+  using BlazinCatFork_P7.Shared.Features.Base;
   using System.Collections.Generic;
+
+  public class Image
+  {
+    public string Id { get; set; }
+    public string Url { get; set; }
+    //public object[] breeds { get; set; }
+    //public string[] catagories { get; set; }
+  }
 
   public class SearchResponse : BaseResponse
   {
     public List<Image> Images { get; set; }
-    public class Image
-    {
-      public string Id { get; set; }
-      public string Url { get; set; }
-      //public object[] breeds { get; set; }
-      //public string[] catagories { get; set; }
-
-    }
-
   }
 }

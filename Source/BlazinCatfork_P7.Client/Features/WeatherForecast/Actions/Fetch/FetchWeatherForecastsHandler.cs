@@ -1,11 +1,11 @@
-﻿namespace BlazinCatfork_P7.Client.Features.WeatherForecast
+﻿namespace BlazinCatFork_P7.Client.Features.WeatherForecast
 {
   using System.Collections.Generic;
   using System.Net.Http;
   using System.Threading;
   using System.Threading.Tasks;
   using BlazorState;
-  using BlazinCatfork_P7.Shared.Features.WeatherForecast;
+  using BlazinCatFork_P7.Shared.Features.WeatherForecast;
   using Microsoft.AspNetCore.Components;
 
   internal partial class WeatherForecastsState

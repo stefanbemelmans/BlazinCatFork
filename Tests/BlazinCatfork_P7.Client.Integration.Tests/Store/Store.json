@@ -1,13 +1,13 @@
 {
-  "BlazinCatfork_P7.Client.Features.Application.ApplicationState": {
+  "BlazinCatFork_P7.Client.Features.Application.ApplicationState": {
     "name": "Blazor State Demo Application",
     "guid": "5a2efcec-6297-4254-a2dc-30e4e567e549"
   },
-  "BlazinCatfork_P7.Client.Features.Counter.CounterState": {
+  "BlazinCatFork_P7.Client.Features.Counter.CounterState": {
     "count": 18,
     "guid": "a0d74c63-13f4-4a2f-b18b-9a1fdaa397b2"
   },
-  "BlazinCatfork_P7.Client.Features.WeatherForecast.WeatherForecastsState": {
+  "BlazinCatFork_P7.Client.Features.WeatherForecast.WeatherForecastsState": {
     "weatherForecasts": [
       {
         "date": "2018-08-26T09:29:54.0507889Z",

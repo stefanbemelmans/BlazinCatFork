@@ -1,9 +1,9 @@
-﻿namespace BlazinCatfork_P7.Client.Features.Counter
+﻿namespace BlazinCatFork_P7.Client.Features.Counter
 {
   using System.Threading;
   using System.Threading.Tasks;
   using BlazorState;
-  using BlazinCatfork_P7.Client.Features.Base;
+  using BlazinCatFork_P7.Client.Features.Base;
 
   internal partial class CounterState
   {

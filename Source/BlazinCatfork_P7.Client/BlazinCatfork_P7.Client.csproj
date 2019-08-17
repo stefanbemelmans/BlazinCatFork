@@ -21,6 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BlazinCatfork_P7.Shared\BlazinCatfork_P7.Shared.csproj" />
+    <ProjectReference Include="..\BlazinCatFork_P7.Shared\BlazinCatFork_P7.Shared.csproj" />
   </ItemGroup>
 </Project>

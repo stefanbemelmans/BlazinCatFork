@@ -1,6 +1,6 @@
-﻿namespace BlazinCatfork_P7.Client.Features.Application.Components
+﻿namespace BlazinCatFork_P7.Client.Features.Application.Components
 {
-  using BlazinCatfork_P7.Client.Features.Base.Components;
+  using BlazinCatFork_P7.Client.Features.Base.Components;
 
   public class NavBarBase : BaseComponent
   {

@@ -1,8 +1,8 @@
-﻿namespace BlazinCatfork_P7.Server.Features.WeatherForecast
+﻿namespace BlazinCatFork_P7.Server.Features.WeatherForecast
 {
   using System.Threading.Tasks;
-  using BlazinCatfork_P7.Server.Features.Base;
-  using BlazinCatfork_P7.Shared.Features.WeatherForecast;
+  using BlazinCatFork_P7.Server.Features.Base;
+  using BlazinCatFork_P7.Shared.Features.WeatherForecast;
   using Microsoft.AspNetCore.Mvc;
 
   [Route(GetWeatherForecastsRequest.Route)]

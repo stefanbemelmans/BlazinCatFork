@@ -1,4 +1,4 @@
-﻿namespace BlazinCatfork_P7.Server
+﻿namespace BlazinCatFork_P7.Server
 {
   using Microsoft.AspNetCore.Hosting;
   using Microsoft.Extensions.Hosting;

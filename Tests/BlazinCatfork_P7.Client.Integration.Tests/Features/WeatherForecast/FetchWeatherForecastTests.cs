@@ -1,7 +1,7 @@
-﻿namespace BlazinCatfork_P7.Client.Integration.Tests.Features.WeatherForecast
+﻿namespace BlazinCatFork_P7.Client.Integration.Tests.Features.WeatherForecast
 {
-  using BlazinCatfork_P7.Client.Features.WeatherForecast;
-  using BlazinCatfork_P7.Client.Integration.Tests.Infrastructure;
+  using BlazinCatFork_P7.Client.Features.WeatherForecast;
+  using BlazinCatFork_P7.Client.Integration.Tests.Infrastructure;
   using BlazorState;
   using MediatR;
   using Microsoft.Extensions.DependencyInjection;

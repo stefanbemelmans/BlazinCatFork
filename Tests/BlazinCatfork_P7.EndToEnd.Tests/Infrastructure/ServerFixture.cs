@@ -1,4 +1,4 @@
-﻿namespace BlazinCatfork_P7.EndToEnd.Tests.Infrastructure
+﻿namespace BlazinCatFork_P7.EndToEnd.Tests.Infrastructure
 {
   using System;
   using System.IO;
@@ -37,7 +37,7 @@
     protected static string FindSitePath(string aProjectName)
     {
       DirectoryInfo gitRootDirectory = new DirectoryService().FindSolutionRoot();
-      string serverProjectName = "BlazinCatfork_P7.Server";
+      string serverProjectName = "BlazinCatFork_P7.Server";
       serverProjectName = serverProjectName.Replace("_", "-");
       string path = Path.Combine(gitRootDirectory.FullName, "Source", serverProjectName);
       return path;

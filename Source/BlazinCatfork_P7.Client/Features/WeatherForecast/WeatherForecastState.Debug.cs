@@ -1,6 +1,6 @@
-﻿namespace BlazinCatfork_P7.Client.Features.WeatherForecast
+﻿namespace BlazinCatFork_P7.Client.Features.WeatherForecast
 {
-  using BlazinCatfork_P7.Shared.Features.WeatherForecast;
+  using BlazinCatFork_P7.Shared.Features.WeatherForecast;
   using BlazorState;
   using Microsoft.JSInterop;
   using System.Collections.Generic;

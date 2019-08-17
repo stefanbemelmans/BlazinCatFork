@@ -1,4 +1,4 @@
-﻿namespace BlazinCatfork_P7.Client.Features.Application
+﻿namespace BlazinCatFork_P7.Client.Features.Application
 {
   using System.Collections.Generic;
   using System.Reflection;

@@ -1,11 +1,12 @@
-﻿namespace BlazinCatfork_P7.Client.Features.Base
+﻿namespace BlazinCatFork_P7.Client.Features.Base
 {
-  using BlazinCatfork_P7.Client.Features.Application;
-  using BlazinCatfork_P7.Client.Features.Counter;
-  using BlazinCatfork_P7.Client.Features.WeatherForecast;
-  using BlazinCatfork_P7.Client.Features.EventStream;
+  using BlazinCatFork_P7.Client.Features.Application;
+  using BlazinCatFork_P7.Client.Features.Counter;
+  using BlazinCatFork_P7.Client.Features.WeatherForecast;
+  using BlazinCatFork_P7.Client.Features.EventStream;
   using BlazorState;
   using MediatR;
+  using BlazinCatFork_P7.Client.Features.CatPic;
 
   /// <summary>
   /// Base Handler that makes it easy to access state
@@ -22,5 +23,6 @@
     protected WeatherForecastsState WeatherForecastsState => Store.GetState<WeatherForecastsState>();
     protected CounterState CounterState => Store.GetState<CounterState>();
     protected EventStreamState EventStreamState => Store.GetState<EventStreamState>();
+    protected CatPicState CatPicState => Store.GetState<CatPicState>();
   }
 }

@@ -1,4 +1,4 @@
-﻿namespace BlazinCatfork_P7.Client.Pipeline.NotificationPreProcessor
+﻿namespace BlazinCatFork_P7.Client.Pipeline.NotificationPreProcessor
 {
   using System.Threading;
   using System.Threading.Tasks;

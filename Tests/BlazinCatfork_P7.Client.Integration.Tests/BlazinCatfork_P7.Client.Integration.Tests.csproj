@@ -16,8 +16,8 @@
 
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Source\BlazinCatfork_P7.Client\BlazinCatfork_P7.Client.csproj" />
-    <ProjectReference Include="..\..\Source\BlazinCatfork_P7.Server\BlazinCatfork_P7.Server.csproj" />
+    <ProjectReference Include="..\..\Source\BlazinCatFork_P7.Client\BlazinCatFork_P7.Client.csproj" />
+    <ProjectReference Include="..\..\Source\BlazinCatFork_P7.Server\BlazinCatFork_P7.Server.csproj" />
   </ItemGroup>
 
   <ItemGroup>

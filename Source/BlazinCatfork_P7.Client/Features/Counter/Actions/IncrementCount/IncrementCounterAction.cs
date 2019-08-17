@@ -1,7 +1,7 @@
-﻿namespace BlazinCatfork_P7.Client.Features.Counter
+﻿namespace BlazinCatFork_P7.Client.Features.Counter
 {
   using MediatR;
-  using BlazinCatfork_P7.Shared.Features.Base;
+  using BlazinCatFork_P7.Shared.Features.Base;
 
   public class IncrementCounterAction : BaseRequest, IRequest<CounterState>
   {

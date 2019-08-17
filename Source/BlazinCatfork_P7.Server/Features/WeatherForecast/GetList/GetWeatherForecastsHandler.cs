@@ -1,11 +1,11 @@
-﻿namespace BlazinCatfork_P7.Server.Features.WeatherForecast
+﻿namespace BlazinCatFork_P7.Server.Features.WeatherForecast
 {
   using System;
   using System.Collections.Generic;
   using System.Linq;
   using System.Threading;
   using System.Threading.Tasks;
-  using BlazinCatfork_P7.Shared.Features.WeatherForecast;
+  using BlazinCatFork_P7.Shared.Features.WeatherForecast;
   using MediatR;
 
   public class GetWeatherForecastsHandler : IRequestHandler<GetWeatherForecastsRequest, GetWeatherForecastsResponse>

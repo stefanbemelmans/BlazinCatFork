@@ -1,7 +1,7 @@
-﻿namespace BlazinCatfork_P7.Client.Features.Counter.Components
+﻿namespace BlazinCatFork_P7.Client.Features.Counter.Components
 {
-  using BlazinCatfork_P7.Client.Features.Base.Components;
-  using BlazinCatfork_P7.Client.Features.Counter;
+  using BlazinCatFork_P7.Client.Features.Base.Components;
+  using BlazinCatFork_P7.Client.Features.Counter;
   using System.Threading.Tasks;
 
   public class CounterBase : BaseComponent

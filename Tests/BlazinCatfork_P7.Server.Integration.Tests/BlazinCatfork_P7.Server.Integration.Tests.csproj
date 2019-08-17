@@ -13,8 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Source\BlazinCatfork_P7.Server\BlazinCatfork_P7.Server.csproj" />
-    <ProjectReference Include="..\..\Source\BlazinCatfork_P7.Shared\BlazinCatfork_P7.Shared.csproj" />
+    <ProjectReference Include="..\..\Source\BlazinCatFork_P7.Server\BlazinCatFork_P7.Server.csproj" />
+    <ProjectReference Include="..\..\Source\BlazinCatFork_P7.Shared\BlazinCatFork_P7.Shared.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,4 @@
-﻿namespace BlazinCatfork_P7.EndToEnd.Tests.Infrastructure
+﻿namespace BlazinCatFork_P7.EndToEnd.Tests.Infrastructure
 {
   using System;
   using System.IO;
@@ -14,7 +14,7 @@
     /// <returns>DirectoryInfo of the directory that contains the target directory or returns null if not in a git repository</returns>
     public DirectoryInfo FindSolutionRoot()
     {
-      const string SolutionFileName = "BlazinCatfork_P7.sln";
+      const string SolutionFileName = "BlazinCatFork_P7.sln";
       var directory = new DirectoryInfo(Environment.CurrentDirectory);
       bool found = directory.GetFiles(SolutionFileName).Length > 0;
       while (!found && directory.Parent != null)

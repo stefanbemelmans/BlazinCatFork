@@ -1,4 +1,4 @@
-﻿namespace BlazinCatfork_P7.Client.Components
+﻿namespace BlazinCatFork_P7.Client.Components
 {
   using BlazorState;
   using BlazorState.Services;

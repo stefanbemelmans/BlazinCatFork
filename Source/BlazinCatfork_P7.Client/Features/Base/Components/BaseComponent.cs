@@ -1,10 +1,11 @@
-﻿namespace BlazinCatfork_P7.Client.Features.Base.Components
+﻿namespace BlazinCatFork_P7.Client.Features.Base.Components
 {
   using BlazorState.Pipeline.ReduxDevTools;
-  using BlazinCatfork_P7.Client.Features.Application;
-  using BlazinCatfork_P7.Client.Features.Counter;
-  using BlazinCatfork_P7.Client.Features.WeatherForecast;
-  using BlazinCatfork_P7.Client.Features.EventStream;
+  using BlazinCatFork_P7.Client.Features.Application;
+  using BlazinCatFork_P7.Client.Features.Counter;
+  using BlazinCatFork_P7.Client.Features.WeatherForecast;
+  using BlazinCatFork_P7.Client.Features.EventStream;
+  using BlazinCatFork_P7.Client.Features.CatPic;
 
   /// <summary>
   /// Makes access to the State a little easier and by inheriting from
@@ -21,5 +22,6 @@
     internal CounterState CounterState => GetState<CounterState>();
     internal EventStreamState EventStreamState => GetState<EventStreamState>();
     internal WeatherForecastsState WeatherForecastsState => GetState<WeatherForecastsState>();
+    internal CatPicState CatPicState => GetState<CatPicState>();
   }
 }

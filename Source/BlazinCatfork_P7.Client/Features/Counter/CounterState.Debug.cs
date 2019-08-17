@@ -1,4 +1,4 @@
-﻿namespace BlazinCatfork_P7.Client.Features.Counter
+﻿namespace BlazinCatFork_P7.Client.Features.Counter
 {
   using System;
   using System.Collections.Generic;

@@ -1,8 +1,8 @@
-﻿namespace BlazinCatfork_P7.Server.Integration.Tests.Features.WeatherForecast.GetAll
+﻿namespace BlazinCatFork_P7.Server.Integration.Tests.Features.WeatherForecast.GetAll
 {
   using System;
   using System.Threading.Tasks;
-  using BlazinCatfork_P7.Shared.Features.WeatherForecast;
+  using BlazinCatFork_P7.Shared.Features.WeatherForecast;
   using MediatR;
   using Microsoft.Extensions.DependencyInjection;
   using Shouldly;

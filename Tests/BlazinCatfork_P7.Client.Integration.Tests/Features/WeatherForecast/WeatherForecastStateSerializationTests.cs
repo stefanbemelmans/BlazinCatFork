@@ -1,8 +1,8 @@
-﻿namespace BlazinCatfork_P7.Client.Integration.Tests.Features.WeatherForecast
+﻿namespace BlazinCatFork_P7.Client.Integration.Tests.Features.WeatherForecast
 {
   using System;
   using Shouldly;
-  using BlazinCatfork_P7.Shared.Features.WeatherForecast;
+  using BlazinCatFork_P7.Shared.Features.WeatherForecast;
   using System.Text.Json;
 
   internal class WeatherForecastStateSerializationTests

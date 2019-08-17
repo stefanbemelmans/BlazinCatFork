@@ -1,4 +1,4 @@
-﻿namespace BlazinCatfork_P7.Shared.Features.WeatherForecast
+﻿namespace BlazinCatFork_P7.Shared.Features.WeatherForecast
 {
   using System;
 

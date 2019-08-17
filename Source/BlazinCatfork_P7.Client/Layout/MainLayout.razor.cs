@@ -1,4 +1,4 @@
-﻿namespace BlazinCatfork_P7.Client.Layout
+﻿namespace BlazinCatFork_P7.Client.Layout
 {
   using BlazorState.Services;
   using Microsoft.AspNetCore.Components;

@@ -1,7 +1,7 @@
-﻿namespace BlazinCatfork_P7.Client.Integration.Tests.Pipeline
+﻿namespace BlazinCatFork_P7.Client.Integration.Tests.Pipeline
 {
-  using BlazinCatfork_P7.Client.Features.Counter;
-  using BlazinCatfork_P7.Client.Integration.Tests.Infrastructure;
+  using BlazinCatFork_P7.Client.Features.Counter;
+  using BlazinCatFork_P7.Client.Integration.Tests.Infrastructure;
   using BlazorState;
   using MediatR;
   using Microsoft.Extensions.DependencyInjection;

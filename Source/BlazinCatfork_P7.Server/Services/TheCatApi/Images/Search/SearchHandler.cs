@@ -1,12 +1,11 @@
-﻿namespace BlazinCatFork.Server.Services.CatPic
+﻿namespace BlazinCatFork_P7.Server.Services.CatPic
 {
   using MediatR;
   using Microsoft.AspNetCore.Components;
   using System.Collections.Generic;
   using System.Threading.Tasks;
   using System.Threading;
-  using static BlazinCatFork.Server.Services.CatPic.SearchResponse;
-
+  using Shared.Features.CatPic;
   public class SearchHandler : IRequestHandler<SearchRequest, SearchResponse>
   {
     public TheCatApiHttpClient TheCatApiHttpClient { get; set; }

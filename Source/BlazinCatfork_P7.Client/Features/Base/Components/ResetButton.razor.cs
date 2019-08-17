@@ -1,6 +1,6 @@
-﻿namespace BlazinCatfork_P7.Client.Features.Base.Components
+﻿namespace BlazinCatFork_P7.Client.Features.Base.Components
 {
-  using BlazinCatfork_P7.Client.Features.Application;
+  using BlazinCatFork_P7.Client.Features.Application;
 
   public class ResetButtonBase : BaseComponent
   {

@@ -1,6 +1,6 @@
-﻿namespace BlazinCatfork_P7.Server
+﻿namespace BlazinCatFork_P7.Server
 {
-  using BlazinCatFork.Server.Services.CatPic;
+  using BlazinCatFork_P7.Server.Services.CatPic;
   using BlazorState;
   using MediatR;
   using Microsoft.AspNetCore.Builder;

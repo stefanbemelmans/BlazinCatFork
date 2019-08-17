@@ -1,7 +1,7 @@
-﻿namespace BlazinCatfork_P7.Server.Features.Base
+﻿namespace BlazinCatFork_P7.Server.Features.Base
 {
   using System.Threading.Tasks;
-  using BlazinCatfork_P7.Shared.Features.Base;
+  using BlazinCatFork_P7.Shared.Features.Base;
   using MediatR;
   using Microsoft.AspNetCore.Mvc;
   using Microsoft.Extensions.DependencyInjection;

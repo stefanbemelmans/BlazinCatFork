@@ -1,7 +1,7 @@
-﻿namespace BlazinCatfork_P7.Client.Pages
+﻿namespace BlazinCatFork_P7.Client.Pages
 {
   using System.Threading.Tasks;
-  using BlazinCatfork_P7.Client.Features.Base.Components;
+  using BlazinCatFork_P7.Client.Features.Base.Components;
 
   public class WeatherForecastsPageBase : BaseComponent
   {

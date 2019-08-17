@@ -1,4 +1,4 @@
-﻿namespace BlazinCatfork_P7.Server.Integration.Tests
+﻿namespace BlazinCatFork_P7.Server.Integration.Tests
 {
   using System;
   using System.IO;

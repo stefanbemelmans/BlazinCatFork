@@ -1,4 +1,4 @@
-﻿namespace BlazinCatfork_P7.Client.Features.WeatherForecast
+﻿namespace BlazinCatFork_P7.Client.Features.WeatherForecast
 {
   using MediatR;
 

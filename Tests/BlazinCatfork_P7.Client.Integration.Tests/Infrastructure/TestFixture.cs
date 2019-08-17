@@ -1,10 +1,10 @@
-﻿namespace BlazinCatfork_P7.Client.Integration.Tests.Infrastructure
+﻿namespace BlazinCatFork_P7.Client.Integration.Tests.Infrastructure
 {
-  using BlazinCatfork_P7.Client;
-  using BlazinCatfork_P7.Client.Features.Application;
-  using BlazinCatfork_P7.Client.Features.Counter;
-  using BlazinCatfork_P7.Client.Features.EventStream;
-  using BlazinCatfork_P7.Client.Features.WeatherForecast;
+  using BlazinCatFork_P7.Client;
+  using BlazinCatFork_P7.Client.Features.Application;
+  using BlazinCatFork_P7.Client.Features.Counter;
+  using BlazinCatFork_P7.Client.Features.EventStream;
+  using BlazinCatFork_P7.Client.Features.WeatherForecast;
   using BlazorHostedCSharp.Client.Features.ClientLoader;
   using BlazorState;
   using Microsoft.AspNetCore.Blazor.Hosting;

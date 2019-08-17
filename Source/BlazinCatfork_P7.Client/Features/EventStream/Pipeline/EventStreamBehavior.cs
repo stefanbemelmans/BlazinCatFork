@@ -1,4 +1,4 @@
-﻿namespace BlazinCatfork_P7.Client.Features.EventStream
+﻿namespace BlazinCatFork_P7.Client.Features.EventStream
 {
   using System;
   using System.Threading;
@@ -6,7 +6,7 @@
   using BlazorState;
   using MediatR;
   using Microsoft.Extensions.Logging;
-  using BlazinCatfork_P7.Shared.Features.Base;
+  using BlazinCatFork_P7.Shared.Features.Base;
 
   /// <summary>
   /// Every event that comes through the pipeline adds an object to the EventStreamState

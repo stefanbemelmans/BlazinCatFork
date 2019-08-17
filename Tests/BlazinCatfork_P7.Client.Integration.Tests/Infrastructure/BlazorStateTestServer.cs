@@ -1,4 +1,4 @@
-﻿namespace BlazinCatfork_P7.Client.Integration.Tests.Infrastructure
+﻿namespace BlazinCatFork_P7.Client.Integration.Tests.Infrastructure
 {
   using Microsoft.AspNetCore;
   using Microsoft.AspNetCore.Hosting;

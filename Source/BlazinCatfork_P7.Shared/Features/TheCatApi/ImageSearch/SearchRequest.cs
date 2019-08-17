@@ -1,6 +1,6 @@
-﻿namespace BlazinCatFork.Shared.Features.CatPic
+﻿namespace BlazinCatFork_P7.Shared.Features.CatPic
 {
-  using BlazinCatfork_P7.Shared.Features.Base;
+  using BlazinCatFork_P7.Shared.Features.Base;
   using MediatR;
 
   public class SearchRequest : BaseRequest, IRequest<SearchResponse>

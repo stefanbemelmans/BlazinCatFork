@@ -1,12 +1,12 @@
-﻿namespace BlazinCatfork_P7.Client.Integration.Tests
+﻿namespace BlazinCatFork_P7.Client.Integration.Tests
 {
   using System;
   using System.IO;
-  using BlazinCatfork_P7.Client.Features.Application;
-  using BlazinCatfork_P7.Client.Features.Counter;
-  using BlazinCatfork_P7.Client.Features.WeatherForecast;
+  using BlazinCatFork_P7.Client.Features.Application;
+  using BlazinCatFork_P7.Client.Features.Counter;
+  using BlazinCatFork_P7.Client.Features.WeatherForecast;
   using BlazorState;
-  using BlazinCatfork_P7.Client.Integration.Tests.Infrastructure;
+  using BlazinCatFork_P7.Client.Integration.Tests.Infrastructure;
   using Microsoft.Extensions.DependencyInjection;
   using Shouldly;
 

@@ -1,4 +1,4 @@
-﻿namespace BlazinCatfork_P7.EndToEnd.Tests.Infrastructure
+﻿namespace BlazinCatFork_P7.EndToEnd.Tests.Infrastructure
 {
   using System;
   using System.IO;

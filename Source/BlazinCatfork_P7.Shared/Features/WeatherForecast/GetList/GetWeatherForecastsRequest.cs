@@ -1,6 +1,6 @@
-﻿namespace BlazinCatfork_P7.Shared.Features.WeatherForecast
+﻿namespace BlazinCatFork_P7.Shared.Features.WeatherForecast
 {
-  using BlazinCatfork_P7.Shared.Features.Base;
+  using BlazinCatFork_P7.Shared.Features.Base;
   using MediatR;
 
   public class GetWeatherForecastsRequest : BaseRequest, IRequest<GetWeatherForecastsResponse>

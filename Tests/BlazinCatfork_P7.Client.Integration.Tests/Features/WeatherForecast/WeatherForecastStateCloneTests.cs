@@ -1,9 +1,9 @@
-﻿namespace BlazinCatfork_P7.Client.Integration.Tests.Features.WeatherForecast
+﻿namespace BlazinCatFork_P7.Client.Integration.Tests.Features.WeatherForecast
 {
   using AnyClone;
-  using BlazinCatfork_P7.Client.Features.WeatherForecast;
-  using BlazinCatfork_P7.Client.Integration.Tests.Infrastructure;
-  using BlazinCatfork_P7.Shared.Features.WeatherForecast;
+  using BlazinCatFork_P7.Client.Features.WeatherForecast;
+  using BlazinCatFork_P7.Client.Integration.Tests.Infrastructure;
+  using BlazinCatFork_P7.Shared.Features.WeatherForecast;
   using BlazorState;
   using Microsoft.Extensions.DependencyInjection;
   using Shouldly;

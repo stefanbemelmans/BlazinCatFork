@@ -1,4 +1,4 @@
-﻿namespace BlazinCatfork_P7.Client.Pipeline
+﻿namespace BlazinCatFork_P7.Client.Pipeline
 {
   using System;
   using System.Threading;

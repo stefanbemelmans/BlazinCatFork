@@ -1,8 +1,8 @@
-﻿namespace BlazinCatfork_P7.Client.Integration.Tests.Features.Application
+﻿namespace BlazinCatFork_P7.Client.Integration.Tests.Features.Application
 {
   using AnyClone;
-  using BlazinCatfork_P7.Client.Features.Application;
-  using BlazinCatfork_P7.Client.Integration.Tests.Infrastructure;
+  using BlazinCatFork_P7.Client.Features.Application;
+  using BlazinCatFork_P7.Client.Integration.Tests.Infrastructure;
   using BlazorState;
   using Microsoft.Extensions.DependencyInjection;
   using Shouldly;
