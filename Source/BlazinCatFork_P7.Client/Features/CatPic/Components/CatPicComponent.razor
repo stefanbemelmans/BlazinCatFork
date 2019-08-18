@@ -1,0 +1,18 @@
+﻿@inherits CatPicComponentModel
+<div class="m-2 p-2 bg-danger text-center d-flex justify-content-center">
+
+  <img id="catPic" src="@CatPicUrl" /> 
+
+  <button id="newCatButton" @onclick="NewCat" title="New Cat">New Cat!</button> 
+</div>
+
+<style>
+  #newCatButton {
+    height: 4rem;
+    width: 5rem;
+  }
+
+  /*#catPic{
+    max-height
+  }*/
+</style>
