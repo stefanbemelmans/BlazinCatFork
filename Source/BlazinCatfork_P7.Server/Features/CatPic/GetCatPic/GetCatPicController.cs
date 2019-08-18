@@ -5,9 +5,9 @@
   using BlazinCatFork_P7.Shared.Features.CatPic;
   using Microsoft.AspNetCore.Mvc;
 
-  [Route(SearchRequest.Route)]
-  public class CatPicSearchController : BaseController<SearchRequest, SearchResponse>
+  [Route(SharedSearchRequest.Route)]
+  public class CatPicSearchController : BaseController<SharedSearchRequest, SharedSearchResponse>
   {
-    public async Task<IActionResult> Get(SearchRequest aRequest) => await Send(aRequest);
+    public async Task<IActionResult> Get(SharedSearchRequest aRequest) => await Send(aRequest);
   }
 }

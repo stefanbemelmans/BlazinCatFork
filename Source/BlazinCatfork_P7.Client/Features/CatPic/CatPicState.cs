@@ -4,15 +4,12 @@
 
   internal partial class CatPicState : State<CatPicState>
   {
-    //private SearchResponse _CatPic;
-    public string CatUrl { get; set; }
     public string CatPicUrl { get; set; }
 
     public CatPicState()
     {
-      //CatPicUrl = _CatPic.Images[0].Url;
     }
 
-    protected override void Initialize() => CatUrl = null;
+    protected override void Initialize() => CatPicUrl = null;
   }
 }

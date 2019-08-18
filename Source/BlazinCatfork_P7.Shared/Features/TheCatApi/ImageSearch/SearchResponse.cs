@@ -11,7 +11,7 @@
     //public string[] catagories { get; set; }
   }
 
-  public class SearchResponse : BaseResponse
+  public class SharedSearchResponse : BaseResponse
   {
     public List<Image> Images { get; set; }
   }

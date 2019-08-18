@@ -3,7 +3,7 @@
   using BlazinCatFork_P7.Shared.Features.Base;
   using MediatR;
 
-  public class SearchRequest : BaseRequest, IRequest<SearchResponse>
+  public class SharedSearchRequest : BaseRequest, IRequest<SharedSearchResponse>
   {
     public const string Route = "api/catpic"; 
     public string Size { get; set; } = "med"; // full med small thumb
