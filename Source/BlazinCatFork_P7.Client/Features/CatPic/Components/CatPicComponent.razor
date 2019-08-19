@@ -1,10 +1,18 @@
 ﻿@inherits CatPicComponentModel
 <div class="m-2 p-2 bg-danger d-flex justify-content-center">
-  <div id="CatPicContainer" class="w-50 m-2">
-    <img id="catPic" class="img-fluid" src="@CatPicUrl" />
+  <div id="CatPicContainer" class="row m-2">
+    <!--!-->
+    <div class="col">
+      <img id="catPic" class="img-fluid" src="https://cdn2.thecatapi.com/images/MTgzMDkyMw.jpg" style="
+    max-height: 27rem;
+">
+    </div>
+    <div class="col">
+      <button id="newCatButton" title="New Cat">New Cat!</button>
+    </div><!--!-->
   </div>
 
-  <button id="newCatButton" @onclick="NewCat" title="New Cat">New Cat!</button> 
+  <button id="newCatButton" @onclick="NewCat" title="New Cat">New Cat!</button>
 </div>
 
 <style>
@@ -13,7 +21,7 @@
     width: 5rem;
   }
 
-  #CatPicContainer{
+  #CatPicContainer {
     height: 25rem;
   }
 </style>
