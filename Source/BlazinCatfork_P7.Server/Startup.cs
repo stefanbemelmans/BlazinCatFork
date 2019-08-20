@@ -1,6 +1,7 @@
 ﻿namespace BlazinCatFork_P7.Server
 {
   using BlazinCatFork_P7.Server.Services.CatPic;
+  using BlazinCatFork_P7.Server.Services.SpoonacularApi;
   using BlazorState;
   using MediatR;
   using Microsoft.AspNetCore.Builder;
@@ -70,6 +71,7 @@
       aServiceCollection.AddMediatR(typeof(Startup).GetTypeInfo().Assembly);
       aServiceCollection.AddHttpClient();
       aServiceCollection.AddScoped<TheCatApiHttpClient>();
+      aServiceCollection.AddScoped<SpoonacularApiHttpClient>();
 
       aServiceCollection.Scan
       (
