@@ -3,66 +3,52 @@
 {
   using BlazinCatFork_P7.Server.Integration.Tests;
   using BlazinCatFork_P7.Server.Services.SpoonacularApi;
-  using BlazinCatFork_P7.Shared.Features.SpoonacularApi.RecipeSearchTypes;
-  using MediatR;
+  using BlazinCatFork_P7.Shared.Features.SpoonacularApi;
   using Microsoft.AspNetCore.Components;
-  using Microsoft.AspNetCore.WebUtilities;
   using Microsoft.Extensions.DependencyInjection;
   using Shouldly;
   using System;
   using System.Collections.Generic;
-  using System.Net.Http;
   using System.Threading.Tasks;
 
-  public class RecipeResponse
-  {
-    public List<RecipePreview> SearchResults { get; set; }
-  }
-
-  internal class RecipeSearchTests
+  internal class SpoonApiRecipeSearchTests
   {
     private SpoonacularApiHttpClient SpoonHttpClient { get; }
-    //private HttpClient HttpClient { get; }
-    //private IMediator Mediator { get; }
     private IServiceProvider ServiceProvider { get; }
-    
 
-    public RecipeSearchTests(TestFixture aTestFixture)
+    public SpoonApiRecipeSearchTests(TestFixture aTestFixture)
     {
       ServiceProvider = aTestFixture.ServiceProvider;
-      //Mediator = ServiceProvider.GetService<IMediator>();
       SpoonHttpClient = ServiceProvider.GetService<SpoonacularApiHttpClient>();
-      //HttpClient = ServiceProvider.GetService<HttpClient>();
-      
     }
 
-    public async Task ShouldGetRecipeResponseWithAddedValues()
+      //public string Ingredients = QueryHelpers.AddQueryString(IngredientSearchUrl, queryParams);
+    public async Task UseSpoonApi()
     {
-      //const string IngredientSearchBaseUrl = "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/findByIngredients";
-      // Arrange
-      //const string IngredientSearchUrl = RecipeSearchRequest.QueryStringBuilder();
+      var recipeRequest = new RecipeSearchRequest()
+      {
+        ingredients = "chicken, onions"
+      };
 
-      //string ingredientsToSearchFor = QueryHelpers.AddQueryString( RecipeSearchRequest.QueryStringBuilder());
-      // Act
-      List<RecipePreview> response = await SpoonHttpClient.GetJsonAsync<List<RecipePreview>>(RecipeSearchRequest.QueryStringBuilder());
+      string searchString = SharedRecipeSearchRequest.SearchUrlBuilder(recipeRequest.number, recipeRequest.ranking, recipeRequest.ignorePantry, recipeRequest.ingredients);
+    //};
+      List<RecipeSearchResult> response = await SpoonHttpClient.GetJsonAsync<List<RecipeSearchResult>>(searchString);
 
-      //Assert
-      response.ShouldNotBeNull();
-      response.ShouldBeOfType<List<RecipePreview>>();
+      response.Count.ShouldBe(5);
+
     }
 
-    //public async Task ShouldGetRecipeResponseWithPrebuiltUri()
-    //{
-    //  // Arrange
-    //  const string IngredientSearchUrl = "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/findByIngredients?number=5&ranking=1&ignorePantry=false&ingredients=onions%2C%20chicken";
-
-    //  // Act
-    //  List<RecipePreview> response = await HttpClient.GetJsonAsync<List<RecipePreview>>(IngredientSearchUrl);
-
-    //  //Assert
-    //  response.ShouldNotBeNull();
-    //  response.ShouldBeOfType<List<RecipePreview>>();
-    //}
-        
   }
+
+
+  
 }
+
+    
+    
+     
+
+
+
+
+ 

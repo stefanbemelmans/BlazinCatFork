@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace BlazinCatFork_P7.Shared.Features.SpoonacularApi.RecipeSearchTypes
+﻿namespace BlazinCatFork_P7.Shared.Features.SpoonacularApi
 {
-  public class RecipePreview
+  using System.Collections.Generic;
+
+  public class RecipeSearchResult
   {
-    public RecipePreview()
+    public RecipeSearchResult()
     {
       //usedIngredients = new List<Ingredient>();
       //missedIngredients = new List<Ingredient>();

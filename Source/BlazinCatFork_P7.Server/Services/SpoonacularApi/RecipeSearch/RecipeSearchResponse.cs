@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using BlazinCatFork_P7.Shared.Features.SpoonacularApi.RecipeSearchTypes;
-
-namespace BlazinCatFork_P7.Server.Services.SpoonacularApi
+﻿namespace BlazinCatFork_P7.Server.Services.SpoonacularApi
 {
+  using System.Collections.Generic;
+  using BlazinCatFork_P7.Shared.Features.SpoonacularApi;
+
   public class RecipeSearchResponse
   {
-   public List<RecipePreview> RecipeSearchResults { get; set; }
+   public List<RecipeSearchResult> RecipeSearchResults { get; set; }
   }
 }
