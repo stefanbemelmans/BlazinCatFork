@@ -5,7 +5,7 @@
 
   public class SharedSearchRequest : BaseRequest, IRequest<SharedSearchResponse>
   {
-    public const string Route = "api/catpic"; 
+    public const string Route = "api/catPic"; 
     public string Size { get; set; } = "med"; // full med small thumb
     public int Limit { get; set; } = 1; // min 1 max 100
 

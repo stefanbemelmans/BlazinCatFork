@@ -9,13 +9,5 @@
     public int ranking { get; set; } = 1; // Whether to maximize used ingredients (1) or minimize missing ingredients (2) first.
     public bool ignorePantry { get; set; } = true;
     public string ingredients { get; set; }
-
-    //public bool limitLicense { get; set; } = false;
-
-    //public static string QueryStringBuilder()
-    //{
-    //  string ingredientsToSearchFor = QueryHelpers.AddQueryString(SpoonacularApiHttpClient.IngredientSearchUrl, "ingredients", "chicken, onions");
-    //  return ingredientsToSearchFor;
-    //}
   }
 }

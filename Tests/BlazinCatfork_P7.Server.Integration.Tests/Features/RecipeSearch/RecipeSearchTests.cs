@@ -1,6 +1,7 @@
 ﻿namespace BlazinCatFork_P7.Server.Integration.Tests.Features.RecipeSearch
 
 {
+  using MediatR;
   using BlazinCatFork_P7.Server.Integration.Tests;
   using BlazinCatFork_P7.Server.Services.SpoonacularApi;
   using BlazinCatFork_P7.Shared.Features.SpoonacularApi;
@@ -14,12 +15,14 @@
   internal class SpoonApiRecipeSearchTests
   {
     private SpoonacularApiHttpClient SpoonHttpClient { get; }
+    private IMediator Mediator { get; }
     private IServiceProvider ServiceProvider { get; }
 
     public SpoonApiRecipeSearchTests(TestFixture aTestFixture)
     {
       ServiceProvider = aTestFixture.ServiceProvider;
       SpoonHttpClient = ServiceProvider.GetService<SpoonacularApiHttpClient>();
+      Mediator = ServiceProvider.GetService<IMediator>();
     }
 
       //public string Ingredients = QueryHelpers.AddQueryString(IngredientSearchUrl, queryParams);
@@ -35,6 +38,36 @@
       List<RecipeSearchResult> response = await SpoonHttpClient.GetJsonAsync<List<RecipeSearchResult>>(searchString);
 
       response.Count.ShouldBe(5);
+
+    }
+
+    public async Task UseServerRecipeSearchRequest()
+    {
+      var recipeRequest = new RecipeSearchRequest()
+      {
+        ingredients = "chicken, onions"
+      };
+
+     
+      //};
+      RecipeSearchResponse response = await Mediator.Send(recipeRequest);
+
+      response.RecipeSearchResults.Count.ShouldBe(5);
+
+    }
+
+    public async Task UseSharedRecipeSearchRequest()
+    {
+      var sharedRecipeRequest = new SharedRecipeSearchRequest()
+      {
+        ingredients = "chicken, onions"
+      };
+
+
+      //};
+      SharedRecipeSearchResponse response = await Mediator.Send(sharedRecipeRequest);
+
+      response.RecipeSearchResults.Count.ShouldBe(5);
 
     }
 
