@@ -2,8 +2,8 @@
 {
   using BlazinCatFork_P8.Client.Features.Base.Components;
 
-  public class CounterPageBase : BaseComponent
+  public class RecipeSearchPageBase : BaseComponent
   {
-    public const string Route = "/counter";
+    public const string Route = "/recipeSearch";
   }
 }
