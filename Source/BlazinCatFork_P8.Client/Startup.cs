@@ -4,6 +4,7 @@
   using BlazinCatFork_P8.Client.Features.CatPic;
   using BlazinCatFork_P8.Client.Features.Counter;
   using BlazinCatFork_P8.Client.Features.EventStream;
+  using BlazinCatFork_P8.Client.Features.Recipes;
   using BlazinCatFork_P8.Client.Features.WeatherForecast;
   using BlazorHostedCSharp.Client.Features.ClientLoader;
   using BlazorState;
@@ -46,6 +47,7 @@
       aServiceCollection.AddTransient<EventStreamState>();
       aServiceCollection.AddTransient<WeatherForecastsState>();
       aServiceCollection.AddTransient<CatPicState>();
+      aServiceCollection.AddTransient<RecipesState>();
     }
   }
 }
