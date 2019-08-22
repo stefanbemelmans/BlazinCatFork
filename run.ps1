@@ -1,1 +1,1 @@
-dotnet run --project .\Source\BlazinCatFork_P7.Server\
+dotnet run --project .\Source\BlazinCatFork_P8.Server\
