@@ -47,7 +47,7 @@
       aServiceCollection.AddTransient<EventStreamState>();
       aServiceCollection.AddTransient<WeatherForecastsState>();
       aServiceCollection.AddTransient<CatPicState>();
-      aServiceCollection.AddTransient<RecipesState>();
+      aServiceCollection.AddTransient<RecipeState>();
     }
   }
 }

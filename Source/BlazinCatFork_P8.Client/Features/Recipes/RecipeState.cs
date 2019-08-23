@@ -4,9 +4,9 @@
   using BlazorState;
   using System.Collections.Generic;
 
-  public class RecipesState : State<RecipesState>
+  public class RecipeState : State<RecipeState>
   {
-    List<RecipeSearchResult> RecipeSearchResults { get; set; }
+    public List<RecipeSearchResult> RecipeSearchResults { get; set; }
 
     protected override void Initialize() { }
   }

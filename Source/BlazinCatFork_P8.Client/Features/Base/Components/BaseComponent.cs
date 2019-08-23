@@ -6,6 +6,7 @@
   using BlazinCatFork_P8.Client.Features.WeatherForecast;
   using BlazinCatFork_P8.Client.Features.EventStream;
   using BlazinCatFork_P8.Client.Features.CatPic;
+  using BlazinCatFork_P8.Client.Features.Recipes;
 
   /// <summary>
   /// Makes access to the State a little easier and by inheriting from
@@ -23,5 +24,6 @@
     internal EventStreamState EventStreamState => GetState<EventStreamState>();
     internal WeatherForecastsState WeatherForecastsState => GetState<WeatherForecastsState>();
     internal CatPicState CatPicState => GetState<CatPicState>();
+    internal RecipeState RecipeState => GetState<RecipeState>();
   }
 }
