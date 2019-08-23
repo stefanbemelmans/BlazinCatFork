@@ -2,17 +2,13 @@
 <div class="m-2 p-2 bg-danger d-flex justify-content-center">
   <div id="CatPicContainer" class="row m-2">
     <!--!-->
-    <div class="col">
-      <img id="catPic" class="img-fluid" src="https://cdn2.thecatapi.com/images/MTgzMDkyMw.jpg" style="
-    max-height: 27rem;
-">
+    <div class="col-8">
+      <img id="catPic" class="img-fluid" src="@CatPicUrl" style="max-height: 25rem;">
     </div>
-    <div class="col">
-      <button id="newCatButton" title="New Cat">New Cat!</button>
-    </div><!--!-->
-  </div>
+   
 
-  <button id="newCatButton" @onclick="NewCat" title="New Cat">New Cat!</button>
+  <button id="newCatButton" class="col-4" @onclick="NewCat" title="New Cat">New Cat!</button>
+  </div>
 </div>
 
 <style>

@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Features\Recipes\Components\RecipeSearchFormComponent.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Blazor-State" Version="$(BlazorStateVersion)" />
     <PackageReference Include="Microsoft.AspNetCore.Blazor" Version="$(MicrosoftAspNetCoreBlazorVersion)" />
     <PackageReference Include="Microsoft.AspNetCore.Blazor.Build" Version="$(MicrosoftAspNetCoreBlazorBuildVersion)" PrivateAssets="all" />
@@ -16,7 +20,6 @@
 
   <ItemGroup>
     <Folder Include="Features\Recipes\Actions\" />
-    <Folder Include="Features\Recipes\Components\RecipeSearchForm\" />
     <Folder Include="Properties\" />
   </ItemGroup>
 
