@@ -5,9 +5,9 @@
   using System.Collections.Generic;
 
   public class RecipesState : State<RecipesState>
-    {
-        List<RecipeSearchResult> RecipeSearchResults { get; set; }
+  {
+    List<RecipeSearchResult> RecipeSearchResults { get; set; }
 
-    protected override void Initialize() => throw new System.NotImplementedException();
+    protected override void Initialize() { }
   }
 }

@@ -1,7 +1,29 @@
 ﻿@inherits  RecipeSearchFormBase
+@using Microsoft.AspNetCore.Components.Forms
 <div id="RecipeSearchForm" class="bg-danger">
 
   Recipe Form Here
+  Enter Comma Separated Ingredients
 
+  <Microsoft.AspNetCore.Components.Forms.EditForm Model="@RecipeSearchFormInputs" OnValidSubmit="SumbitValidForm">
+    <BlazinCatFork_P8.Client.Features.FluentValidation.FluentValidationValidator />
+    <ValidationSummary />
+    <p>
+      <label>Number Of Recipes To Return (5 is default)</label>
+      <InputNumber @bind-Value="@RecipeSearchFormInputs.number" />
+    </p>
+    <p>
+      <label>Ranking: (1) Prioritize Your Chosen Ingredients; (2) Minimize the ingredients you didn't choose. (1) Is Default</label>
+      <InputNumber @bind-Value="@RecipeSearchFormInputs.ranking" />
+    </p>
+    <p>
+      <label>Ignore Pantry Ingredients: Things like flour, water, salt</label>
+      <InputCheckbox @bind-Value="@RecipeSearchFormInputs.ignorePantry" />
+    </p>
+    <p>
+      <label>Number Of Recipes To Return (5 is default)</label>
+      <InputText @bind-Value="@RecipeSearchFormInputs.ingredients" />
+    </p>
+  </Microsoft.AspNetCore.Components.Forms.EditForm>
 
 </div>

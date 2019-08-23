@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BlazinCatFork_P8.Client.Features.Recipes.RecipeValidators
 {
-  public class RecipeSearchValidator : AbstractValidator<RecipeSearchFormBase>
+  public class RecipeSearchValidator : AbstractValidator<SharedRecipeSearchRequest>
   {
     public RecipeSearchValidator()
     {
