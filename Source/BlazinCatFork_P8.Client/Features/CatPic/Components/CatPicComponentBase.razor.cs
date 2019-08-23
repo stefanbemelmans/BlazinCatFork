@@ -3,7 +3,7 @@
   using BlazinCatFork_P8.Client.Features.Base.Components;
   using System.Threading.Tasks;
 
-  public class CatPicComponentModel : BaseComponent
+  public class CatPicComponentBase : BaseComponent
     {
     public string CatPicUrl => CatPicState.CatPicUrl;
 
