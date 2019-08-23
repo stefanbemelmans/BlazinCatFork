@@ -1,0 +1,27 @@
+﻿@inherits  RecipeSearchResultComponentBase
+  <div id="SearchResult" class="text-center bg-primary">
+
+    <h2>@RecipeSearchResult.title</h2>
+    <br />
+    <img id="recipeImage" src="@RecipeSearchResult.image" alt="" />
+
+    <h4>Number Of Used Ingredients: @RecipeSearchResult.usedIngredientCount</h4>
+    <h4>Number Of Missed Ingredients: @RecipeSearchResult.usedIngredientCount</h4>
+    <h4>Number Of Likes: @RecipeSearchResult.likes</h4>
+
+    <h4>Recipe ID: @RecipeSearchResult.id</h4>
+
+    <button id="getRecDetails" @onclick="GetRecipeDetails" />
+  </div>
+
+<style>
+
+  #recipeImage{
+    height: 8rem; 
+    width: 8rem;
+  }
+  #getRecDetails{
+     height: 3rem;
+    width: 7rem;
+  }
+</style>

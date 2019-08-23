@@ -1,25 +1,25 @@
 ﻿@inherits RecipeSearchFormBase
 @using Microsoft.AspNetCore.Components.Forms
-<div id="RecipeSearchForm" class="bg-danger">
+<div id="RecipeSearchForm" class="bg-info pt-2">
   <Microsoft.AspNetCore.Components.Forms.EditForm Model="@RecipeSearchFormInputs" OnValidSubmit="SumbitValidForm">
     <BlazinCatFork_P8.Client.Features.FluentValidation.FluentValidationValidator />
     <ValidationSummary />
     <div>
-      <label for="#number" class="col-5 text-light font-weight-bold text-center">Number Of Recipes To Return (5 is default)</label>
+      <label for="#number" class="col-5 text-dark font-weight-bold text-center">Number Of Recipes To Return (5 is default)</label>
       <InputNumber id="number" class="col-5" @bind-Value="@RecipeSearchFormInputs.number" />
     </div>
     <div>
-      <label for="#ranking" class="col-5 text-light font-weight-bold text-center">Ranking: (1) Prioritize Your Chosen Ingredients; (2) Minimize the ingredients you didn't choose. (1) Is Default</label>
+      <label for="#ranking" class="col-5 text-dark font-weight-bold text-center">Ranking: (1) Prioritize Your Chosen Ingredients; (2) Minimize the ingredients you didn't choose. (1) Is Default</label>
       <InputNumber id="ranking" class="col-5" @bind-Value="@RecipeSearchFormInputs.ranking" />
     </div>
     <div>
-      <label for="#ignorePantry" class="col-5 text-light font-weight-bold text-center">Ignore Pantry Ingredients: Things like flour, water, salt</label>
+      <label for="#ignorePantry" class="col-5 text-dark font-weight-bold text-center">Ignore Pantry Ingredients: Things like flour, water, salt</label>
       <InputCheckbox id="ignorePantry" class="col-5" @bind-Value="@RecipeSearchFormInputs.ignorePantry" />
     </div>
-    <p>
-      <label for="#ingredients" class="col-5 text-light font-weight-bold text-center">Enter Ingredient Names Separated By A Comma (,)  </label>
+    <div>
+      <label for="#ingredients" class="col-5 text-dark font-weight-bold text-center">Enter Ingredient Names Separated By A Comma (,)  </label>
       <InputTextArea id="ingredients" class="col-5" @bind-Value="@RecipeSearchFormInputs.ingredients" />
-    </p>
+    </div>
   </Microsoft.AspNetCore.Components.Forms.EditForm>
   <button id="RecipeSearchSubmit" type="submit" @onclick="SumbitValidForm" title="Search!" class="btn-success btn-lg">Search!</button>
 </div>
