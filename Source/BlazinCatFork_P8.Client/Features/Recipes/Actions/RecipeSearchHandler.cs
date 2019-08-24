@@ -29,7 +29,7 @@
         searchRequest.IgnorePantry = aRecipeSearchAction.IgnorePantry;
         searchRequest.Ingredients = aRecipeSearchAction.Ingredients;
 
-        SharedRecipeSearchResponse searchResults = await HttpClient.PostJsonAsync<SharedRecipeSearchResponse>(SharedRecipeSearchRequest.Route, searchRequest).ConfigureAwait(true);
+        SharedRecipeSearchResponse searchResults = await HttpClient.PostJsonAsync<SharedRecipeSearchResponse>(SharedRecipeSearchRequest.Route, searchRequest);
 
         RecipeState.RecipeSearchResults = searchResults.RecipeSearchResults;
 

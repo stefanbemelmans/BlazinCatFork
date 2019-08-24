@@ -5,11 +5,11 @@
 
   public class CatPicComponentBase : BaseComponent
     {
-    public System.Uri CatPicUrl => CatPicState.CatPicUrl;
+    public string CatPicUrl => CatPicState.CatPicUrl;
 
-    public async Task NewCat() => await Mediator.Send(new GetCatPicAction()).ConfigureAwait(true);
+    public async Task NewCat() => await Mediator.Send(new GetCatPicAction());
 
-    protected override async Task OnInitializedAsync() => await NewCat().ConfigureAwait(true);
+    protected override async Task OnInitializedAsync() => await NewCat();
   }
 
 

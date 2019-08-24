@@ -9,6 +9,6 @@
   {
     [Route(SharedRecipeSearchRequest.Route)]
     [HttpPost]
-    public async Task<IActionResult> Get ([FromBody] SharedRecipeSearchRequest aRequest) => await Send(aRequest);
+    public async Task<IActionResult> Get (SharedRecipeSearchRequest aRequest) => await Send(aRequest);
   }
 }

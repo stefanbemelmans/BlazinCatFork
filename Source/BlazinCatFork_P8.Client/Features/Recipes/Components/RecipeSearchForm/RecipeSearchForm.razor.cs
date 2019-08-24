@@ -55,7 +55,7 @@
         IgnorePantry = RecipeSearchFormInputs.IgnorePantry,
         Ingredients = cleanedString
       }
-      ).ConfigureAwait(true);
+      );
     }
   }
 }

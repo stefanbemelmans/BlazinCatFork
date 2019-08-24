@@ -12,14 +12,14 @@
   using System.Threading.Tasks;
   using BlazinCatFork_P8.Client.Features.Recipes.Actions;
 
-  internal class ClientRecipeSearchTests
+  internal class ClientCatPicSearchTests
   {
     RecipeState RecipeState { get; set; }
     private IMediator Mediator { get; set; }
     private IServiceProvider ServiceProvider { get; }
     private IStore Store { get; }
 
-    public ClientRecipeSearchTests(TestFixture aTestFixture)
+    public ClientCatPicSearchTests(TestFixture aTestFixture)
     {
       ServiceProvider = aTestFixture.ServiceProvider;
       Mediator = ServiceProvider.GetService<IMediator>();
@@ -32,13 +32,16 @@
       //Arrange
       var recipeSearchRequest = new RecipeSearchAction
       {
-        Ingredients = "potato, chicken"
+        Number= 15,
+        Ingredients = "potato, chicken",
+        Ranking = 1,
+        IgnorePantry = true
       };
 
       //Act
 
       //Assert
-      (await Mediator.Send(recipeSearchRequest)).RecipeSearchResults.Count.ShouldBe(5);
+      (await Mediator.Send(recipeSearchRequest)).RecipeSearchResults.Count.ShouldBe(15);
      
     }
   }
