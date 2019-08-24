@@ -1,8 +1,10 @@
 ﻿@inherits RecipeSearchFormBase
 @using Microsoft.AspNetCore.Components.Forms
+@using BlazinCatFork_P8.Client.Features.FluentValidation
+
 <div id="RecipeSearchForm" class="bg-info pt-2">
-  <Microsoft.AspNetCore.Components.Forms.EditForm Model="@RecipeSearchFormInputs" OnValidSubmit="SumbitValidForm">
-    <BlazinCatFork_P8.Client.Features.FluentValidation.FluentValidationValidator />
+  <EditForm Model="@RecipeSearchFormInputs" OnValidSubmit="SumbitValidForm">
+    <FluentValidationValidator />
     <ValidationSummary />
     <div>
       <label for="#number" class="col-5 text-dark font-weight-bold text-center">Number Of Recipes To Return (5 is default)</label>
@@ -20,7 +22,7 @@
       <label for="#ingredients" class="col-5 text-dark font-weight-bold text-center">Enter Ingredient Names Separated By A Comma (,)  </label>
       <InputTextArea id="ingredients" class="col-5" @bind-Value="@RecipeSearchFormInputs.Ingredients" />
     </div>
-  </Microsoft.AspNetCore.Components.Forms.EditForm>
+  </EditForm>
   <button id="RecipeSearchSubmit" type="submit" @onclick="SumbitValidForm" title="Search!" class="btn-success btn-lg">Search!</button>
 </div>
 <style>
