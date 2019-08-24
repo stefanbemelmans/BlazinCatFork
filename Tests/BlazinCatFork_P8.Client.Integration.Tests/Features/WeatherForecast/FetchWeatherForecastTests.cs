@@ -32,7 +32,7 @@
       // Default WeatherForecastsState is an empty list. So no need to initialize it.
       var fetchWeatherForecastsRequest = new FetchWeatherForecastsAction();
 
-      WeatherForecastsState = await Mediator.Send(fetchWeatherForecastsRequest);
+      WeatherForecastsState = (await Mediator.Send(fetchWeatherForecastsRequest));
 
       WeatherForecastsState.WeatherForecasts.Count.ShouldBeGreaterThan(0);
     }

@@ -4,6 +4,7 @@
   using BlazinCatFork_P8.Shared.Features.CatPic;
   using BlazorState;
   using Microsoft.AspNetCore.Components;
+  using System.Collections.Generic;
   using System.Net.Http;
   using System.Threading;
   using System.Threading.Tasks;
@@ -23,8 +24,8 @@
         CancellationToken aCancellationToken
       )
       {
-        SharedSearchResponse catPicList = await HttpClient.GetJsonAsync<SharedSearchResponse>(SharedSearchRequest.Route);
-        string url = catPicList.Images[0].Url;
+        List<Image> catPicList = await HttpClient.GetJsonAsync<List<Image>>(SharedSearchRequest.Route);
+        string url = catPicList[0].Url;
 
         CatPicState.CatPicUrl = url;
         return CatPicState;

@@ -24,7 +24,7 @@
       CatPicState = Store.GetState<CatPicState>();
     }
 
-    public async Task ShouldRetrieveSearchResultsFromClient()
+    public async Task ShouldRetrieveCatPicFromClient()
     {
       //Arrange
       var catPicSearchRequest = new GetCatPicAction();
@@ -32,8 +32,8 @@
       //Act
 
       //Assert
-      CatPicState url = await Mediator.Send(catPicSearchRequest);
-      url.CatPicUrl.ShouldNotBe(null);
+      (await Mediator.Send(catPicSearchRequest)).CatPicUrl.ShouldNotBe(null);
+      
     }
   }
 }
