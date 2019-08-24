@@ -22,14 +22,16 @@
 
       public override async Task<RecipeState> Handle(RecipeSearchAction aRecipeSearchAction, CancellationToken aCancellationToken)
       {
-        SharedRecipeSearchResponse searchResults = await HttpClient.PutJsonAsync<SharedRecipeSearchResponse>(SharedRecipeSearchRequest.Route, new SharedRecipeSearchRequest()
+
+        var searchRequest = new SharedRecipeSearchRequest()
         {
-          number = aRecipeSearchAction.number,
-          ranking = aRecipeSearchAction.ranking,
-          ignorePantry = aRecipeSearchAction.ignorePantry,
-          ingredients = aRecipeSearchAction.ingredients
-        }
-        );
+          number = aRecipeSearchAction.SearchRequest.number,
+          ranking = aRecipeSearchAction.SearchRequest.ranking,
+          ignorePantry = aRecipeSearchAction.SearchRequest.ignorePantry,
+          ingredients = aRecipeSearchAction.SearchRequest.ingredients
+        };
+
+        SharedRecipeSearchResponse searchResults = await HttpClient.PostJsonAsync<SharedRecipeSearchResponse>( SharedRecipeSearchRequest.Route, searchRequest);
 
         RecipeState.RecipeSearchResults = searchResults.RecipeSearchResults;
 

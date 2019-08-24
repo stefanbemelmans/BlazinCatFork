@@ -8,7 +8,7 @@
   public class RecipeSearchController : BaseController<SharedRecipeSearchRequest, SharedRecipeSearchResponse>
   {
     [Route(SharedRecipeSearchRequest.Route)]
-
-    public async Task<IActionResult> Get(SharedRecipeSearchRequest aRequest) => await Send(aRequest);
+    [HttpPost]
+    public async Task<IActionResult> Get (SharedRecipeSearchRequest aRequest) => await Send(aRequest);
   }
 }

@@ -1,6 +1,5 @@
 ﻿namespace BlazinCatFork_P8.Client.Features.Recipes
 {
-  using BlazinCatFork_P8.Shared.Features.SpoonacularApi;
   using BlazorState;
   using System.Collections.Generic;
 
@@ -8,6 +7,6 @@
   {
     public List<RecipeSearchResult> RecipeSearchResults { get; set; }
 
-    protected override void Initialize() { }
+    protected override void Initialize() => RecipeSearchResults = new List<RecipeSearchResult>();
   }
 }
