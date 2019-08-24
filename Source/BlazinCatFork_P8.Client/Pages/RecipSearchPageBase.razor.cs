@@ -8,6 +8,6 @@
   {
     public const string Route = "/recipeSearch";
 
-    List<RecipeSearchResult> RecipeSearchResults => RecipeState.RecipeSearchResults;
+    public List<RecipeSearchResult> RecipeSearchResults => RecipeState.RecipeSearchResults;
   }
 }

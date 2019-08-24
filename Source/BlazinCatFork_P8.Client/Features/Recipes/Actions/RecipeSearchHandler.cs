@@ -9,7 +9,7 @@
   using System.Threading;
   using System.Threading.Tasks;
 
-  internal partial class RecipeState 
+  internal partial class RecipeState
   {
     public class RecipeSearchHandler : BaseHandler<RecipeSearchAction, RecipeState>
     {
@@ -22,16 +22,14 @@
 
       public override async Task<RecipeState> Handle(RecipeSearchAction aRecipeSearchAction, CancellationToken aCancellationToken)
       {
+        var searchRequest = new RecipeSearchAction();
 
-        var searchRequest = new SharedRecipeSearchRequest()
-        {
-          number = aRecipeSearchAction.SearchRequest.number,
-          ranking = aRecipeSearchAction.SearchRequest.ranking,
-          ignorePantry = aRecipeSearchAction.SearchRequest.ignorePantry,
-          ingredients = aRecipeSearchAction.SearchRequest.ingredients
-        };
+        searchRequest.Number = aRecipeSearchAction.Number;
+        searchRequest.Ranking = aRecipeSearchAction.Ranking;
+        searchRequest.IgnorePantry = aRecipeSearchAction.IgnorePantry;
+        searchRequest.Ingredients = aRecipeSearchAction.Ingredients;
 
-        SharedRecipeSearchResponse searchResults = await HttpClient.PostJsonAsync<SharedRecipeSearchResponse>( SharedRecipeSearchRequest.Route, searchRequest);
+        SharedRecipeSearchResponse searchResults = await HttpClient.PostJsonAsync<SharedRecipeSearchResponse>(SharedRecipeSearchRequest.Route, searchRequest).ConfigureAwait(true);
 
         RecipeState.RecipeSearchResults = searchResults.RecipeSearchResults;
 

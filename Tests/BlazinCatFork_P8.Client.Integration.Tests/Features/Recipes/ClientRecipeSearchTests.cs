@@ -30,15 +30,15 @@
     public async Task ShouldRetrieveSearchResultsFromClient()
     {
       //Arrange
-      var recipeSearchRequest = new RecipeSearchAction();
-
-      recipeSearchRequest.SearchRequest.ingredients = "potato, chicken";
+      var recipeSearchRequest = new RecipeSearchAction
+      {
+        Ingredients = "potato, chicken"
+      };
 
       //Act
-      RecipeState response = await Mediator.Send(recipeSearchRequest);
 
       //Assert
-      response.RecipeSearchResults.Count.ShouldBe(5);
+      (await Mediator.Send(recipeSearchRequest)).RecipeSearchResults.Count.ShouldBe(5);
      
     }
   }

@@ -1,16 +1,25 @@
 ﻿@page "/recipeSearch"
-@inherits  RecipeSearchPageBase
-
+@inherits RecipeSearchPageBase
+@using BlazinCatFork_P8.Client.Features.Recipes.Components.RecipeSearchForm;
+@using  BlazinCatFork_P8.Client.Features.Recipes.Components.RecipeSearchResultComponent;
 <h1>Recipe Search By Ingredient</h1>
 
 <h2>Enter Ingredients Separated By a Comma</h2>
 
-<br/>
+<br />
 
 <h2>Enter Ingredients</h2>
-<BlazinCatFork_P8.Client.Features.Recipes.Components.RecipeSearchForm.RecipeSearchForm />
+<RecipeSearchForm />
 <br />
 <hr />
+
+@if(RecipeSearchResults != null)
+{
+  foreach(var recipe in RecipeSearchResults) 
+  { 
+    <RecipeSearchResultComponent RecipeSearchResult="recipe"/>
+  }
+}
 <h6>Reset button will clear all state in the Store and return you to the home page</h6>
 <ResetButton/>
 <br />

@@ -1,6 +1,7 @@
 ﻿namespace BlazinCatFork_P8.Client.Features.Recipes.Components
 {
   using BlazinCatFork_P8.Client.Features.Base.Components;
+  using BlazinCatFork_P8.Client.Features.Recipes.Actions;
   using BlazinCatFork_P8.Shared.Features.SpoonacularApi;
   using System;
   using System.Collections.Generic;
@@ -9,13 +10,18 @@
 
   public class RecipeSearchFormBase : BaseComponent
   {
-    public SharedRecipeSearchRequest RecipeSearchFormInputs { get; set; } = new SharedRecipeSearchRequest()
-    {
-      ingredients = "chicken, onions"
-    };
+    private const string Value = "Form Submitted Successfully!";
+
+    public RecipeSearchAction RecipeSearchFormInputs { get; set; } = new RecipeSearchAction();
+  
 
     public static string CleanString(string aIngredientString)
     {
+      if (aIngredientString is null)
+      {
+        throw new ArgumentNullException(nameof(aIngredientString));
+      }
+
       string[] ingredientsSplit = aIngredientString.Split(',');
       var cleanedIngredients = new List<string>();
       foreach (string str in ingredientsSplit)
@@ -35,22 +41,21 @@
 
     public async Task SumbitValidForm()
     {
-      Console.WriteLine("Form Submitted Successfully!");
-      Console.WriteLine($"{RecipeSearchFormInputs.ignorePantry}");
-      Console.WriteLine($"{RecipeSearchFormInputs.ranking}");
-      Console.WriteLine($"{RecipeSearchFormInputs.number}");
-      Console.WriteLine($"{RecipeSearchFormInputs.ingredients}");
+      Console.WriteLine($"{RecipeSearchFormInputs.IgnorePantry}");
+      Console.WriteLine($"{RecipeSearchFormInputs.Ranking}");
+      Console.WriteLine($"{RecipeSearchFormInputs.Number}");
+      Console.WriteLine($"{RecipeSearchFormInputs.Ingredients}");
 
-      string cleanedString = CleanString(RecipeSearchFormInputs.ingredients);
+      string cleanedString = CleanString(RecipeSearchFormInputs.Ingredients);
 
-      _ = await Mediator.Send(new SharedRecipeSearchRequest()
+      _ = await Mediator.Send(new RecipeSearchAction()
       {
-        number = RecipeSearchFormInputs.number,
-        ranking = RecipeSearchFormInputs.ranking,
-        ignorePantry = RecipeSearchFormInputs.ignorePantry,
-        ingredients = cleanedString
+        Number = RecipeSearchFormInputs.Number,
+        Ranking = RecipeSearchFormInputs.Ranking,
+        IgnorePantry = RecipeSearchFormInputs.IgnorePantry,
+        Ingredients = cleanedString
       }
-      );
+      ).ConfigureAwait(true);
     }
   }
 }

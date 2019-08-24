@@ -4,7 +4,7 @@
 
   internal partial class CatPicState : State<CatPicState>
   {
-    public string CatPicUrl { get; set; }
+    public System.Uri CatPicUrl { get; set; }
 
     public CatPicState()
     {

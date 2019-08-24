@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace BlazinCatFork_P8.Client.Features.Recipes.RecipeValidators
 {
-  public class RecipeSearchValidator : AbstractValidator<SharedRecipeSearchRequest>
+  public class RecipeSearchValidatorCollection : AbstractValidator<SharedRecipeSearchRequest>
   {
-    public RecipeSearchValidator()
+    public void RecipeSearchValidator()
     {
       RuleFor(aRequest => aRequest.number).NotEmpty().GreaterThanOrEqualTo(5).WithMessage("Five recipes is default");
       RuleFor(aRequest => aRequest.ranking).NotEmpty().Must(aRanking => aRanking == 1 || aRanking == 2).WithMessage("Prioritize your Ingredients or minimize the others.");

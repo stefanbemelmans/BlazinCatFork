@@ -7,14 +7,9 @@
   public class RecipeSearchAction : BaseRequest, IRequest<RecipeState>
   {
 
-    public SharedRecipeSearchRequest SearchRequest { get; set; }
-    public RecipeSearchAction()
-    {
-      SearchRequest = new SharedRecipeSearchRequest();
-    }
-    //public bool ignorePantry { get; set; } = true;
-    //public string ingredients { get; set; } = "chicken, onion";
-    //public int number { get; set; } = 5; // Of Recipes
-    //public int ranking { get; set; } = 1; // Whether to maximize used ingredients (1) or minimize missing ingredients (2) first.
+    public bool IgnorePantry { get; set; } = true;
+    public string Ingredients { get; set; } = "chicken, onion";
+    public int Number { get; set; } = 5; // Of Recipes
+    public int Ranking { get; set; } = 1; // Whether to maximize used ingredients (1) or minimize missing ingredients (2) first.
   }
 }

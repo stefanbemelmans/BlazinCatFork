@@ -6,19 +6,19 @@
     <ValidationSummary />
     <div>
       <label for="#number" class="col-5 text-dark font-weight-bold text-center">Number Of Recipes To Return (5 is default)</label>
-      <InputNumber id="number" class="col-5" @bind-Value="@RecipeSearchFormInputs.number" />
+      <InputNumber id="number" class="col-5" @bind-Value="@RecipeSearchFormInputs.Number" />
     </div>
     <div>
       <label for="#ranking" class="col-5 text-dark font-weight-bold text-center">Ranking: (1) Prioritize Your Chosen Ingredients; (2) Minimize the ingredients you didn't choose. (1) Is Default</label>
-      <InputNumber id="ranking" class="col-5" @bind-Value="@RecipeSearchFormInputs.ranking" />
+      <InputNumber id="ranking" class="col-5" @bind-Value="@RecipeSearchFormInputs.Ranking" />
     </div>
     <div>
       <label for="#ignorePantry" class="col-5 text-dark font-weight-bold text-center">Ignore Pantry Ingredients: Things like flour, water, salt</label>
-      <InputCheckbox id="ignorePantry" class="col-5" @bind-Value="@RecipeSearchFormInputs.ignorePantry" />
+      <InputCheckbox id="ignorePantry" class="col-5" @bind-Value="@RecipeSearchFormInputs.IgnorePantry" />
     </div>
     <div>
       <label for="#ingredients" class="col-5 text-dark font-weight-bold text-center">Enter Ingredient Names Separated By A Comma (,)  </label>
-      <InputTextArea id="ingredients" class="col-5" @bind-Value="@RecipeSearchFormInputs.ingredients" />
+      <InputTextArea id="ingredients" class="col-5" @bind-Value="@RecipeSearchFormInputs.Ingredients" />
     </div>
   </Microsoft.AspNetCore.Components.Forms.EditForm>
   <button id="RecipeSearchSubmit" type="submit" @onclick="SumbitValidForm" title="Search!" class="btn-success btn-lg">Search!</button>

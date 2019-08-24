@@ -23,8 +23,8 @@
         CancellationToken aCancellationToken
       )
       {
-        SharedSearchResponse CatPicList = await HttpClient.GetJsonAsync<SharedSearchResponse>(SharedSearchRequest.Route);
-        string url = CatPicList.Images[0].Url;
+        SharedSearchResponse CatPicList = await HttpClient.GetJsonAsync<SharedSearchResponse>(SharedSearchRequest.Route).ConfigureAwait(true);
+        var url = new System.Uri(CatPicList.Images[0].Url);
 
         CatPicState.CatPicUrl = url;
         return CatPicState;
