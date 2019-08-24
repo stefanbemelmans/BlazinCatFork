@@ -18,7 +18,7 @@ namespace BlazinCatFork_P8.Server.Services.SpoonacularApi
 
     public async Task<RecipeSearchResponse> Handle(RecipeSearchRequest aRequest, CancellationToken cancellationToken)
     {
-      string searchString = SharedRecipeSearchRequest.SearchUrlBuilder(aRequest.number, aRequest.ranking, aRequest.ignorePantry, aRequest.ingredients);
+      string searchString = SharedRecipeSearchRequest.SearchUrlBuilder(aRequest.Number, aRequest.Ranking, aRequest.IgnorePantry, aRequest.Ingredients);
 
       List<RecipeSearchResult> recSearchResponse = await SpoonApi.GetJsonAsync<List<RecipeSearchResult>>(searchString);
 

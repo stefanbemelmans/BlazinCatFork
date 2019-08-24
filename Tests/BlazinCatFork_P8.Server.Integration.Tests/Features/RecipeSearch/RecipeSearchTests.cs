@@ -25,19 +25,22 @@
       Mediator = ServiceProvider.GetService<IMediator>();
     }
 
-      //public string Ingredients = QueryHelpers.AddQueryString(IngredientSearchUrl, queryParams);
+      //public string Ingredients = QueryHelpers.AddQueryString(IngredientsearchUrl, queryParams);
     public async Task UseSpoonApi()
     {
       var recipeRequest = new RecipeSearchRequest()
       {
-        ingredients = "chicken, onions"
+        Ranking = 1,
+        Ingredients = "chicken, onions",
+        IgnorePantry = true,
+        Number = 10
       };
 
-      string searchString = SharedRecipeSearchRequest.SearchUrlBuilder(recipeRequest.number, recipeRequest.ranking, recipeRequest.ignorePantry, recipeRequest.ingredients);
+      string searchString = SharedRecipeSearchRequest.SearchUrlBuilder(recipeRequest.Number, recipeRequest.Ranking, recipeRequest.IgnorePantry, recipeRequest.Ingredients);
     //};
       List<RecipeSearchResult> response = await SpoonHttpClient.GetJsonAsync<List<RecipeSearchResult>>(searchString);
 
-      response.Count.ShouldBe(5);
+      response.Count.ShouldBe(10);
 
     }
 
@@ -45,7 +48,10 @@
     {
       var recipeRequest = new RecipeSearchRequest()
       {
-        ingredients = "chicken, onions"
+        Ranking = 1,
+        Ingredients = "chicken, onions",
+        IgnorePantry = true,
+        Number = 5
       };
 
      
@@ -60,14 +66,17 @@
     {
       var sharedRecipeRequest = new SharedRecipeSearchRequest()
       {
-        ingredients = "chicken, onions"
+        Ranking = 1,
+        Ingredients = "chicken, onions",
+        IgnorePantry = true,
+        Number = 10
       };
 
 
       //};
       SharedRecipeSearchResponse response = await Mediator.Send(sharedRecipeRequest);
 
-      response.RecipeSearchResults.Count.ShouldBe(5);
+      response.RecipeSearchResults.Count.ShouldBe(10);
 
     }
 

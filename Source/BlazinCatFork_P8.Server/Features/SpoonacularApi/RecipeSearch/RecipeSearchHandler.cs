@@ -21,10 +21,10 @@
     {
       RecipeSearchResponse searchResponse = await Mediator.Send(new RecipeSearchRequest()
       {
-        number = aSearchRequest.number,
-        ranking = aSearchRequest.ranking,
-        ignorePantry = aSearchRequest.ignorePantry,
-        ingredients = aSearchRequest.ingredients
+        Number = aSearchRequest.Number,
+        Ranking = aSearchRequest.Ranking,
+        IgnorePantry = aSearchRequest.IgnorePantry,
+        Ingredients = aSearchRequest.Ingredients
       });
 
       return new SharedRecipeSearchResponse()

@@ -6,10 +6,14 @@
 
   public class RecipeSearchAction : BaseRequest, IRequest<RecipeState>
   {
+    public bool IgnorePantry { get; set; }
+    public string Ingredients { get; set; }
+    public int Number { get; set; }
+    public int Ranking { get; set; } 
 
-    public bool IgnorePantry { get; set; } = true;
-    public string Ingredients { get; set; } = "chicken, onion";
-    public int Number { get; set; } = 5; // Of Recipes
-    public int Ranking { get; set; } = 1; // Whether to maximize used ingredients (1) or minimize missing ingredients (2) first.
+    //public bool IgnorePantry { get; set; } = true;
+    //public string Ingredients { get; set; } = "chicken, onion";
+    //public int Number { get; set; } = 5; // Of Recipes
+    //public int Ranking { get; set; } = 1; // Whether to maximize used ingredients (1) or minimize missing ingredients (2) first.
   }
 }

@@ -5,9 +5,9 @@
 
   public class RecipeSearchRequest : IRequest<RecipeSearchResponse>
   {
-    public int number { get; set; } = 5; // Of Recipes
-    public int ranking { get; set; } = 1; // Whether to maximize used ingredients (1) or minimize missing ingredients (2) first.
-    public bool ignorePantry { get; set; } = true;
-    public string ingredients { get; set; }
+    public int Number { get; set; } = 5; // Of Recipes
+    public int Ranking { get; set; } = 1; // Whether to maximize used ingredients (1) or minimize missing ingredients (2) first.
+    public bool IgnorePantry { get; set; } = true;
+    public string Ingredients { get; set; } = "beef, figs";
   }
 }
