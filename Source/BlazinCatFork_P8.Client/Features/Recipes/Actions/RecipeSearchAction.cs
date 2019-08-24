@@ -1,11 +1,8 @@
-﻿using BlazinCatFork_P8.Shared.Features.Base;
-using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace BlazinCatFork_P8.Client.Features.Recipes.Actions
+﻿namespace BlazinCatFork_P8.Client.Features.Recipes.Actions
 {
+  using BlazinCatFork_P8.Shared.Features.Base;
+  using MediatR;
+
   public class RecipeSearchAction : BaseRequest, IRequest<RecipeState>
   {
     public bool ignorePantry { get; set; } = true;

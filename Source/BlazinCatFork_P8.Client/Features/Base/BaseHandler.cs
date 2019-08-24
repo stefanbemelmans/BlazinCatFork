@@ -7,6 +7,7 @@
   using BlazorState;
   using MediatR;
   using BlazinCatFork_P8.Client.Features.CatPic;
+  using BlazinCatFork_P8.Client.Features.Recipes;
 
   /// <summary>
   /// Base Handler that makes it easy to access state
@@ -23,7 +24,7 @@
     protected WeatherForecastsState WeatherForecastsState => Store.GetState<WeatherForecastsState>();
     protected CounterState CounterState => Store.GetState<CounterState>();
     protected EventStreamState EventStreamState => Store.GetState<EventStreamState>();
-
     protected CatPicState CatPicState => Store.GetState<CatPicState>();
+    protected RecipeState RecipeState => Store.GetState<RecipeState>();
   }
 }

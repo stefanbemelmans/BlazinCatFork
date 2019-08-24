@@ -4,7 +4,7 @@
   using BlazorState;
   using System.Collections.Generic;
 
-  public class RecipeState : State<RecipeState>
+  internal partial class RecipeState : State<RecipeState>
   {
     public List<RecipeSearchResult> RecipeSearchResults { get; set; }
 
