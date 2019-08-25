@@ -11,7 +11,6 @@
 
   internal class ClientCatPicSearchTests
   {
-    private CatPicState CatPicState { get; set; }
     private IMediator Mediator { get; set; }
     private IServiceProvider ServiceProvider { get; }
     private IStore Store { get; }
@@ -21,7 +20,6 @@
       ServiceProvider = aTestFixture.ServiceProvider;
       Mediator = ServiceProvider.GetService<IMediator>();
       Store = ServiceProvider.GetService<IStore>();
-      CatPicState = Store.GetState<CatPicState>();
     }
 
     public async Task ShouldRetrieveCatPicFromClient()
@@ -32,7 +30,8 @@
       //Act
 
       //Assert
-      (await Mediator.Send(catPicSearchRequest)).CatPicUrl.ShouldNotBe(null);
+      CatPicState response =  await Mediator.Send(catPicSearchRequest); 
+      response.CatPicUrl.ShouldNotBe(null);
       
     }
   }

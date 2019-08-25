@@ -5,7 +5,7 @@
   using MediatR;
   using Microsoft.AspNetCore.Mvc;
   using Microsoft.Extensions.DependencyInjection;
-  [ApiController]
+  //[ApiController]
   public class BaseController<TRequest, TResponse> : Controller
     where TRequest : IRequest<TResponse>
     where TResponse : BaseResponse

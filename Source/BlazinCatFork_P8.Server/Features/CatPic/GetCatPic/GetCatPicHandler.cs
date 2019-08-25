@@ -21,12 +21,12 @@
     {
       SearchResponse searchResponse = await Mediator.Send(new SearchRequest());
 
-      var SharedResponse = new SharedSearchResponse()
+      var sharedResponse = new SharedSearchResponse()
       {
         Images = searchResponse.Images
       };
 
-      return SharedResponse;
+      return sharedResponse;
     }
   }
 }

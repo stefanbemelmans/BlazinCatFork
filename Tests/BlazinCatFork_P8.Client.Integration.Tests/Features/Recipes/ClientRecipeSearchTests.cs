@@ -42,7 +42,7 @@
 
       //Assert
       RecipeState response = await Mediator.Send(recipeSearchRequest);
-      response.RecipeSearchResults.Count.ShouldBe(5);
+      response.RecipeSearchResults.Count.ShouldBe(15);
      
     }
   }

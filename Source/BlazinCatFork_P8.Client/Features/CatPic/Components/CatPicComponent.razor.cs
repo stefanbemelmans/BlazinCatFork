@@ -12,5 +12,4 @@
     protected override async Task OnInitializedAsync() => await NewCat();
   }
 
-
 }
