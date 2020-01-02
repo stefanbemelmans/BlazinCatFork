@@ -1,3 +1,11 @@
+# Blazin Catfork
+
+just like regular (catfork Live site)[https://stefanbemelmans.github.io/catfork]
+(catfork Repo)[https://github.com/stefanbemelmans/catfork]
+but written in C# with .NET Core and Blazor.
+
+Just updated the UI to modern times, so pictures will be coming soon. 
+
 # Directory Structure
 * Artifacts - Build outputs go here. Doing a build.cmd/build.sh generates artifacts here (nupkgs, dlls, pdbs, etc.)
 * Assets - Image Logos etc.
