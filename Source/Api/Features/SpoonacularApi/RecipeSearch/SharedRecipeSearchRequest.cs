@@ -21,7 +21,7 @@
     //public string ingredients { get; set; } = "chicken, onion";
 
     //public bool limitLicense { get; set; } = false;
-    public static System.Uri SearchUrlBuilder(int aNumOfRecipes, int aRecRanking, bool aPantIgnore, string aIngs)
+    public static string SearchUrlBuilder(int aNumOfRecipes, int aRecRanking, bool aPantIgnore, string aIngs)
     {
       var searchParams = new Dictionary<string, string>()
       {
@@ -31,8 +31,9 @@
         { "ingredients", aIngs }
       };
 
+      /*I'm going to have this return a string, and turn it into a URI by in the Handler*/
      string ingredientSearchString = QueryHelpers.AddQueryString(IngredientSearchEndpoint, searchParams);
-      return new System.Uri(ingredientSearchString);
+      return ingredientSearchString;
     }
   }
 }
